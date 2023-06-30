@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.button {
+  display: inline-block;
+  width: 100%;
+  max-width: rem(202);
+  background-color: $green1;
+  color: $white;
+  text-align: center;
+  padding: rem(16) rem(0);
+  cursor: pointer;
+  font-size: rem(14);
+  line-height: 1;
+  border: rem(1) solid $green1;
+  position: relative;
+  z-index: 1;
+}
+
+.button::first-letter {
+  text-transform: capitalize;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(rem(4), rem(4));
+  border: rem(1) solid $green1;
+  z-index: -2;
+}
+
+.button::after {
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.button:hover::after {
+  transform: scale(1, 1);
+}
+
+.button:hover {
+  color: $green1;
+  opacity: 1;
+}
+
+.button span {
+  position: relative;
+  padding-right: rem(48);
+}
+
+.button span::after {
+  content: "";
+  position: absolute;
+  width: rem(40);
+  height: rem(7);
+  top: 40.74%;
+  transform: translateY(-50%);
+  right: 0;
+  background-image: url(../images/common/arrow-01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.2s background-color;
+}
+
+.button:hover span::after {
+  background-image: url(../images/common/arrow-02.png);
+}
