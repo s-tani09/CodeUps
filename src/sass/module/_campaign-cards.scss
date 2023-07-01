@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.campaign-cards__items {
+  display: grid;
+  grid-auto-flow: column;
+}

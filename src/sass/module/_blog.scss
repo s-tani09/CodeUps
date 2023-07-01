@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.blog__bg-image {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.blog__title {
+  @include mq("md") {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+}

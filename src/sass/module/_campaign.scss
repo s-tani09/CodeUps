@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.campaign__slider {
+  margin-top: rem(24);
+  margin-right: calc(50% - 50vw);
+  padding-bottom: rem(10);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.campaign__button {
+  margin-top: rem(30);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(67);
+  }
+}
+
+.campaign__slider .swiper-slide img {
+  aspect-ratio: 280 / 188;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+
+  @include mq("md") {
+    aspect-ratio: 333 / 223;
+  }
+}

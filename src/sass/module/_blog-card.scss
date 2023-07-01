@@ -1,6 +1,5 @@
 @use "global" as *;
 .blog_card {
-  box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 0.25);
   background-color: $white;
 }
 
@@ -8,6 +7,7 @@
   display: inline-block;
   padding: rem(16) rem(16) rem(24);
   background-color: $white;
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 0.25);
 }
 
 .blog-card__image {

@@ -33,3 +33,11 @@
   width: rem(24);
   height: rem(24);
 }
+
+.footer__nav {
+  margin-top: rem(45);
+
+  @include mq("md") {
+    margin-top: rem(16);
+  }
+}

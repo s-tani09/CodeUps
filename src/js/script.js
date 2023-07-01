@@ -1,6 +1,68 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
+  $(function () {
+    // ハンバーガーメニュー
+    $(".js-hamburger,.js-drawer js-drawer a").click(function () {
+      $(".js-hamburger").toggleClass("is-active");
+      $(".js-drawer").fadeToggle();
+      $("html").toggleClass("is-fixed");
+    });
+  });
+
+  $(window).resize(function () {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      closeDrawer();
+    }
+  });
+
+  function openDrawer() {
+    $(".js-drawer").fadeIn();
+    $(".js-hamburger").addClass("is-active");
+  }
+
+  function closeDrawer() {
+    $(".js-drawer").fadeOut();
+    $(".js-hamburger").removeClass("is-active");
+  }
+  // スライダー
+  var swiper = new Swiper(".js-mv-slider", {
+    loop: true,
+    effect: "fade", // フェード切り替え
+    // 自動再生
+    autoplay: {
+      delay: 4000, // 4秒後に次のスライドへ
+      disableOnInteraction: false, // ユーザーが操作しても自動再生を継続
+    },
+    speed: 2000, // 2秒かけてフェード
+  });
+
+  var swiper = new Swiper(".js-campaign-swiper", {
+    loop: true,
+    slidesPerView: 1.26,
+    breakpoints: {
+      768: {
+        slidesPerView: 3.29,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3.49,
+        spaceBetween: 40,
+      },
+    },
+    spaceBetween: 24,
+    speed: 2000,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".js-campaign-button-next",
+      prevEl: ".js-campaign-button-prev",
+    },
+  });
+
   //要素の取得とスピードの設定
   var box = $(".js-colorbox"),
     speed = 700;
@@ -28,4 +90,28 @@ jQuery(function ($) {
       }
     });
   });
+});
+
+// ボタンをクリックしたらスクロールして上に戻る
+topBtn.click(function () {
+  $("body,html").animate(
+    {
+      scrollTop: 0,
+    },
+    500,
+    "swing"
+  );
+  return false;
+});
+
+// スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
+
+$(document).on("click", 'a[href*="#"]', function () {
+  let time = 400;
+  let header = $("header").innerHeight();
+  let target = $(this.hash);
+  if (!target.length) return;
+  let targetY = target.offset().top - header;
+  $("html,body").animate({ scrollTop: targetY }, time, "swing");
+  return false;
 });
