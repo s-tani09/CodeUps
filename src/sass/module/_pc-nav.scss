@@ -1,65 +1,77 @@
 @use "global" as *;
 
 .pc-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: $white;
 }
 
 .pc-nav__items {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: inherit;
 }
 
 .pc-nav__item {
-  height: 100%;
+  height: inherit;
 }
+
 .pc-nav__item a {
   display: grid;
   place-items: center;
-  padding: 0 rem(16);
-}
-.pc-nav__item-en {
-  font-size: rem(18);
-  font-weight: $regular;
-  line-height: 1;
-  color: $white;
-}
-
-.pc-nav__item-ja {
-  margin-top: rem(7);
-  font-size: rem(10);
-  text-align: center;
-  line-height: 1;
-  color: $white;
+  height: inherit;
+  padding-left: rem(13);
+  padding-right: rem(13);
+  // padding-left: clamp(1rem, 1.389vw, 1.25rem);
+  // padding-right: clamp(1rem, 1.389vw, 1.25rem);
 }
 
 .pc-nav__item a:hover {
   opacity: 1;
 }
 
-.pc-nav__item span {
+.pc-nav__item-wrap {
   position: relative;
 }
 
-.pc-nav__item a::after {
+.pc-nav__item-wrap::after {
   content: "";
-  /*絶対配置で線の位置を決める*/
   position: absolute;
-  bottom: 0;
-  left: 10%;
-  /*線の形状*/
-  width: 80%;
-  height: 2px;
-  background: #0481a2;
-  /*アニメーションの指定*/
-  transition: all 0.3s;
+  width: 100%;
+  height: rem(1);
+  background-color: $white;
+  bottom: rem(-4);
+  left: 0;
   transform: scale(0, 1); /*X方向0、Y方向1*/
-  transform-origin: center top; /*上部中央基点*/
+  transform-origin: center top;
+  transition: transform 0.3s;
 }
 
-.pc-nav__item span:hover::after {
-  visibility: visible;
+.pc-nav__item a:hover .pc-nav__item-wrap::after {
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
+}
+
+.pc-nav__item-en {
+  display: block;
+  text-align: center;
+  font-size: rem(18);
+  line-height: 1;
+  font-weight: $regular;
+}
+
+.pc-nav__item-en::first-letter {
+  text-transform: capitalize;
+}
+
+.pc-nav__item.pc-nav__item--uppercase a {
+  text-transform: uppercase;
+}
+
+.pc-nav__item-jp {
+  display: block;
+  margin-top: rem(7);
+  font-size: rem(10);
+  text-align: center;
+  line-height: 1;
+  font-weight: $regular;
 }

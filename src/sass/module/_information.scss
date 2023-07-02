@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.information {
+  background-color: $gray2;
+  padding: rem(80) 0 rem(82);
+  @include mq("md") {
+    padding: rem(100) 0;
+  }
+}
+
+.information__box {
+  margin-top: rem(28);
+  @include mq("md") {
+    margin-top: rem(40);
+    display: flex;
+  }
+}

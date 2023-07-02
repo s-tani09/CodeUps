@@ -1,11 +1,5 @@
 @use "global" as *;
 
-.information-box {
-}
-
-.information-box__inner {
-}
-
 .information-box__items {
   display: block;
   @include mq("md") {
@@ -26,13 +20,10 @@
 }
 
 .information-box__item-image img {
-  aspect-ratio: 345/227;
+  aspect-ratio: 540/356;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  @include mq("md") {
-    aspect-ratio: 540/356;
-  }
 }
 
 .colorbox {
@@ -67,6 +58,7 @@
 
 .information-box__item-textLine {
   border-bottom: rem(1) solid $green1;
+  border-radius: rem(1);
   padding-bottom: rem(8);
 }
 

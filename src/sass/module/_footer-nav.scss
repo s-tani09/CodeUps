@@ -1,14 +1,38 @@
 @use "global" as *;
 
 .footer-nav {
-  display: flex;
   width: 100%;
+  display: flex;
   background-color: $green1;
+}
+
+.footer-nav__inner {
+  display: flex;
+  padding: rem(96) rem(15) rem(80);
 }
 
 .footer-nav__left,
 .footer-nav__right {
   width: calc(50% - rem(5));
+
+  @include mq("md") {
+    width: calc(50% - rem(14));
+
+    display: flex;
+    flex-direction: column;
+    height: rem(234);
+    flex-wrap: wrap;
+    row-gap: rem(16);
+    column-gap: rem(45);
+  }
+}
+
+.footer-nav__right {
+  margin-left: rem(10);
+
+  @include mq("md") {
+    margin-left: rem(28);
+  }
 }
 
 .footer-nav__left-items,
@@ -24,11 +48,11 @@
   padding-top: rem(12);
   padding-bottom: rem(12);
   padding-left: rem(22);
-  font-weight: $regular;
-  font-size: rem(16);
-  line-height: 1.125;
   color: $white;
+  font-weight: $regular;
+  line-height: 1.125;
 }
+
 .footer-nav__left-item:first-child a,
 .footer-nav__right-item:first-child a {
   font-weight: $bold;
@@ -37,23 +61,23 @@
 
 .footer-nav__left-item:first-child a::before,
 .footer-nav__right-item:first-child a::before {
-  position: absolute;
   content: "";
+  position: absolute;
   width: rem(18);
   height: rem(18);
   top: rem(8);
   left: 0;
-  background-image: url(../images/common/hitode.png);
+  background-image: url(../images/common/menu-icon.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.footer-nav__left-item + .footer-nav__left-item,
-.footer-nav__right-item + .footer-nav__right-item {
-  margin-top: (16);
-}
+.footer-nav__left-items + .footer-nav__left-items,
+.footer-nav__right-items + .footer-nav__right-items {
+  margin-top: rem(16);
 
-.footer-nav__right {
-  margin-left: rem(12);
+  @include mq("md") {
+    margin-top: 0;
+  }
 }

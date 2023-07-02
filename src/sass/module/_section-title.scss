@@ -45,4 +45,7 @@
   font-weight: $regular;
   line-height: calc(18 / 12);
   color: $green1;
+  @include mq("md") {
+    margin-top: rem(9);
+  }
 }

@@ -1,27 +1,18 @@
 @use "global" as *;
 
-// ドロワー
 .sp-nav {
-  position: absolute;
-  z-index: 5000;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  width: 100%;
-  height: 100vh;
   background-color: $green1;
+  overflow-y: scroll;
 }
 
 .sp-nav__inner {
   display: flex;
-  justify-content: space-between;
-  padding: rem(96) rem(15) rem(100);
+  padding: rem(96) rem(15) rem(119);
 }
+
 .sp-nav__left,
 .sp-nav__right {
-  width: calc(50% - rem(5));
+  width: 50%;
 }
 
 .sp-nav__left-items,
@@ -37,11 +28,11 @@
   padding-top: rem(12);
   padding-bottom: rem(12);
   padding-left: rem(22);
-  font-weight: $regular;
-  font-size: rem(16);
-  line-height: 1.125;
   color: $white;
+  font-weight: $regular;
+  line-height: 1.125;
 }
+
 .sp-nav__left-item:first-child a,
 .sp-nav__right-item:first-child a {
   font-weight: $bold;
@@ -50,8 +41,8 @@
 
 .sp-nav__left-item:first-child a::before,
 .sp-nav__right-item:first-child a::before {
-  position: absolute;
   content: "";
+  position: absolute;
   width: rem(18);
   height: rem(18);
   top: rem(8);
@@ -62,11 +53,12 @@
   background-size: cover;
 }
 
-.sp-nav__left-item + .sp-nav__left-item,
-.sp-nav__right-item + .sp-nav__right-item {
-  margin-top: (16);
+sp-nav__left-items + .sp-nav__left-items,
+.sp-nav__right-items + .sp-nav__right-items {
+  margin-top: rem(16);
 }
 
-.footer-nav__right {
-  margin-left: rem(12);
+html.is-fixed {
+  height: 100%;
+  overflow: hidden;
 }

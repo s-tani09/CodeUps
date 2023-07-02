@@ -4,21 +4,6 @@
   position: relative;
 }
 
-.about__inner::before {
-  @include mq("md") {
-    content: "";
-    position: absolute;
-    width: rem(194);
-    height: rem(181);
-    bottom: rem(-90);
-    right: calc(50% - min(48.5vw, rem(640)));
-    background-image: url(../images/common/sango.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-}
-
 .about__image-box {
   margin-top: rem(24);
   @include mq("md") {
@@ -26,13 +11,13 @@
   }
 }
 
-.about__img-small {
+.about__image-small {
   width: 37.1014%;
   position: relative;
   z-index: 2;
 }
 
-.about__img-small img {
+.about__image-small img {
   aspect-ratio: 128 / 194;
   object-fit: cover;
   width: 100%;
@@ -42,23 +27,18 @@
   }
 }
 
-.about__img-large {
-  width: 81.45%;
+.about__image-large {
+  width: 81.44927536%;
   margin-top: -49%;
   margin-left: auto;
   z-index: 1;
-
-  @include mq("md") {
-    margin-top: -48.5%;
-  }
 }
 
-.about__img-large img {
+.about__image-large img {
   aspect-ratio: 281 / 186;
   object-fit: cover;
   width: 100%;
   height: 100%;
-
   @include mq("md") {
     aspect-ratio: 880 / 581;
   }
@@ -66,12 +46,11 @@
 
 .about__content-box {
   margin-top: rem(40);
-
   @include mq("md") {
     margin-top: 0;
     width: 74.78%;
     position: absolute;
-    top: 40%;
+    top: 40.5%;
     left: 19.8%;
     z-index: 2;
     display: flex;
@@ -83,7 +62,6 @@
   font-weight: $regular;
   line-height: 1;
   color: $green1;
-
   @include mq("md") {
     width: 50%;
     font-size: rem(80);
@@ -92,31 +70,18 @@
   }
 }
 
-.about__title {
-  position: absolute;
-  top: rem(24);
-  left: rem(39);
-  color: $white;
-
-  @include mq("md") {
-    position: static;
-  }
-}
-
 .about__text-box {
   margin-top: rem(19);
-  position: absolute;
   @include mq("md") {
     margin-top: 0;
-    width: 37%;
-    top: 40%;
-    right: 4%;
+    margin-left: rem(35);
+    width: 50%;
   }
 }
 
 .about__text {
   line-height: 1.5;
-  color: $black2;
+  color: $black1;
   @include mq("md") {
     color: $white;
   }

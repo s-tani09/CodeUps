@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.menu-list__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1;
+  border-bottom: rem(1) solid $green1;
+  padding-bottom: rem(5);
+  @include mq("md") {
+    font-weight: $medium;
+    padding: rem(7) 0;
+  }
+}
+
+.menu-list__item {
+  margin-top: rem(16);
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: rem(18);
+  @include mq("md") {
+    row-gap: rem(17);
+  }
+}
+
+.menu-list__item dt {
+  width: 80%;
+  line-height: 1;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.menu-list__item dd {
+  width: 20%;
+  text-align: right;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: rem(14);
+  line-height: 1;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}

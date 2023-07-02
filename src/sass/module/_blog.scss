@@ -1,17 +1,62 @@
 @use "global" as *;
 
-.blog__bg-image {
+.blog {
+  position: relative;
   @include mq("md") {
-    position: relative;
+    padding-top: rem(92);
   }
 }
 
-.blog__title {
+.blog__bg-image {
   @include mq("md") {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72.168%;
+  }
+}
+
+.blog__bg-image img {
+  @include mq("md") {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.blog__inner {
+  position: relative;
+}
+
+// .blog__inner::before {
+//   @include mq("md") {
+//       content: "";
+//       position: absolute;
+//       width: rem(301);
+//       height: rem(138);
+//       top: rem(-76);
+//       left: calc(50% - min(48.5vw, rem(600)));
+//       background-image: url(../images/common/fish1.png);
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       background-size: contain;
+//   }
+// }
+
+.blog__cards {
+  margin-top: rem(26);
+  padding: 0 rem(6);
+  @include mq("md") {
+    padding: 0;
+    margin-top: rem(80);
+  }
+}
+
+.blog__button {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(80);
   }
 }

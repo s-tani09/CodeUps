@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.price {
+  overflow: hidden;
+  background-color: $gray2;
+  padding: rem(85) 0 rem(86);
+  @include mq("md") {
+    padding: rem(100) 0 rem(106);
+  }
+}
+
+.price__inner {
+  position: relative;
+}
+
+.price__inner::before {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    width: rem(437);
+    height: rem(201);
+    bottom: rem(-43);
+    left: calc(50% - min(48.5vw, rem(624)));
+    background-image: url(../images/common/fish3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.price__content {
+  margin-top: rem(26);
+  @include mq("md") {
+    margin-top: rem(39);
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.price__image-box {
+  @include mq("md") {
+    margin-left: rem(93);
+    width: calc(50% - rem(46));
+  }
+}
+
+.price__image-box img {
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+  }
+}
+
+.price__table {
+  margin-top: rem(47);
+  @include mq("md") {
+    margin-top: 0;
+    width: calc(50% - rem(47));
+  }
+}
+
+.price__button {
+  margin-top: rem(41);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(78);
+  }
+}
