@@ -21,12 +21,14 @@
 }
 
 .mv__title {
-  left: 51.6%;
+  width: 100%;
   position: absolute;
-  top: 55.8%;
-  transform: translate(-50.29%, -50%);
+  top: 43.8%;
   z-index: 1;
   color: $white;
+  @include mq("md") {
+    top: 46.8%;
+  }
 }
 
 .mv__title-main {
@@ -36,6 +38,7 @@
   font-weight: $regular;
   line-height: 1.2;
   letter-spacing: 0.54em;
+  text-indent: 0.54em;
   text-transform: uppercase;
   @include mq("md") {
     font-size: rem(80);

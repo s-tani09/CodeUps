@@ -11,27 +11,31 @@
   padding: rem(96) rem(15) rem(80);
 }
 
-.footer-nav__left,
-.footer-nav__right {
+.footer-nav__left {
   width: calc(50% - rem(5));
-
   @include mq("md") {
     width: calc(50% - rem(14));
+    display: flex;
+    flex-direction: column;
+    height: rem(234);
+    flex-wrap: wrap;
+    row-gap: rem(16);
+    column-gap: rem(29);
+  }
+}
 
+.footer-nav__right {
+  margin-left: rem(10);
+  width: calc(50% - rem(5));
+  @include mq("md") {
+    margin-left: rem(28);
+    width: calc(50% - rem(14));
     display: flex;
     flex-direction: column;
     height: rem(234);
     flex-wrap: wrap;
     row-gap: rem(16);
     column-gap: rem(45);
-  }
-}
-
-.footer-nav__right {
-  margin-left: rem(10);
-
-  @include mq("md") {
-    margin-left: rem(28);
   }
 }
 
@@ -67,7 +71,7 @@
   height: rem(18);
   top: rem(8);
   left: 0;
-  background-image: url(../images/common/menu-icon.png);
+  background-image: url(../images/common/hitode.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
