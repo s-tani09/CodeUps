@@ -29,20 +29,20 @@
   position: relative;
 }
 
-// .blog__inner::before {
-//   @include mq("md") {
-//       content: "";
-//       position: absolute;
-//       width: rem(301);
-//       height: rem(138);
-//       top: rem(-76);
-//       left: calc(50% - min(48.5vw, rem(600)));
-//       background-image: url(../images/common/fish1.png);
-//       background-repeat: no-repeat;
-//       background-position: center;
-//       background-size: contain;
-//   }
-// }
+.blog__inner::before {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    width: rem(301);
+    height: rem(138);
+    top: rem(-76);
+    left: calc(50% - min(48.5vw, rem(600)));
+    background-image: url(../images/common/contact-fish.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
 
 .blog__cards {
   margin-top: rem(26);

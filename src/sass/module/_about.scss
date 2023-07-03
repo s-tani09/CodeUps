@@ -4,6 +4,21 @@
   position: relative;
 }
 
+.about__inner::before {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    width: rem(194);
+    height: rem(181);
+    bottom: rem(-90);
+    right: calc(50% - min(48.5vw, rem(640)));
+    background-image: url(../images/common/sango.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
 .about__image-box {
   margin-top: rem(24);
   @include mq("md") {

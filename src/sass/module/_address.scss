@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.address__item + .address__item {
+  margin-top: rem(12);
+}
+
+.address__item p {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1;
+}
+
+.address__item p span {
+  display: inline-block;
+}

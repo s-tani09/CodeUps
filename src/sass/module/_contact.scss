@@ -19,7 +19,7 @@
   top: rem(-26);
   right: rem(15);
   z-index: 1;
-  background-image: url(../images/common/fish3.png);
+  background-image: url(../images/common/contact-fish.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -69,7 +69,7 @@
   }
 }
 
-.contact__address {
+.contact__content {
   margin-top: rem(19);
   text-align: center;
   @include mq("md") {
@@ -79,14 +79,14 @@
   }
 }
 
-.contact__access-info {
+.contact__address {
   @include mq("md") {
     width: 33.1818%;
     padding-top: rem(4);
   }
 }
 
-.contact__access-map {
+.contact__map {
   margin-top: rem(20);
 
   @include mq("md") {
@@ -96,7 +96,7 @@
   }
 }
 
-.contact__access-map iframe {
+.contact__map iframe {
   aspect-ratio: 295 / 160;
   object-fit: cover;
   width: 100%;

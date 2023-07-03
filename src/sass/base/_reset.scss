@@ -74,7 +74,6 @@ img:not([alt]) {
   filter: blur(10px);
 }
 
-
 /* フォームリセット */
 input,
 button,
@@ -101,7 +100,7 @@ input[type="radio"] {
 
 input[type="submit"],
 input[type="button"],
-label,
+category,
 button,
 select {
   cursor: pointer;

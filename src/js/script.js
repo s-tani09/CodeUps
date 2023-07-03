@@ -99,7 +99,7 @@ box.each(function () {
   color.on("inview", function () {
     if (counter == 0) {
       $(this)
-        .delay(200)
+        .delay(500)
         .animate({ width: "100%" }, speed, function () {
           image.css("opacity", "1");
           $(this).css({ left: "0", right: "auto" });
