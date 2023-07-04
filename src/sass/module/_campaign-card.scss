@@ -47,12 +47,12 @@
   margin-top: rem(8);
   font-size: rem(16);
   font-weight: $medium;
-  line-height: 1.5;
+  line-height: 1;
   padding-bottom: rem(3);
   border-bottom: rem(1) solid $green1;
   @include mq("md") {
-    margin-top: rem(10);
-    padding-bottom: rem(2);
+    margin-top: rem(11);
+    padding-bottom: rem(7.5);
   }
 }
 
@@ -60,7 +60,7 @@
   margin-top: rem(15);
   padding: 0 rem(19) 0;
   @include mq("md") {
-    margin-top: rem(23);
+    margin-top: rem(22.5);
   }
 }
 
@@ -116,7 +116,7 @@
   font-size: rem(32);
   color: $green1;
   @include mq("md") {
-    margin-left: rem(24);
+    margin-left: rem(24.5);
     font-size: rem(40);
   }
 }

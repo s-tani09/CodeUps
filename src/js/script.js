@@ -22,7 +22,7 @@ jQuery(function ($) {
 });
 
 // ハンバーガーメニュー
-$(".js-hamburger").click(function () {
+$(".js-hamburger,.js-sp-nav").click(function () {
   $(".js-hamburger").toggleClass("is-active");
   $(".js-sp-nav").fadeToggle();
   $("html").toggleClass("is-fixed");

@@ -9,12 +9,6 @@
   }
 }
 
-.blog-cards--grid {
-  @include mq("md") {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .blog-cards__item + .blog-cards__item {
   margin-top: rem(40);
   @include mq("md") {
