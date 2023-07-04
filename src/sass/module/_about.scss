@@ -77,7 +77,6 @@
   font-weight: $regular;
   line-height: 1;
   color: $green1;
-  text-transform: capitalize;
   @include mq("md") {
     width: 50%;
     font-size: rem(80);

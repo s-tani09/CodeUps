@@ -53,7 +53,7 @@
   background-size: cover;
 }
 
-sp-nav__left-items + .sp-nav__left-items,
+.sp-nav__left-items + .sp-nav__left-items,
 .sp-nav__right-items + .sp-nav__right-items {
   margin-top: rem(16);
 }

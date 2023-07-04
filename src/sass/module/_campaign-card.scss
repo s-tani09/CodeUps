@@ -94,29 +94,29 @@
   align-items: center;
   padding-top: rem(3);
   position: relative;
-  // text-decoration: line-through rem(3) solid red;
+  text-decoration: line-through rem(3) solid $red;
   @include mq("md") {
     font-size: rem(24);
   }
 }
 
-.campaign-card__price-regular::before {
-  content: "";
-  position: absolute;
-  display: block;
-  background-color: $red;
-  width: 100%;
-  height: rem(3);
-  top: 53%;
-  left: 0;
-}
+// .campaign-card__price-regular::before {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   background-color: $red;
+//   width: 100%;
+//   height: rem(3);
+//   top: 53%;
+//   left: 0;
+// }
 
 .campaign-card__price-sale {
   margin-left: rem(20);
   font-size: rem(32);
   color: $green1;
   @include mq("md") {
-    margin-left: clamp(rem(1.6), 1.736vw, rem(24.96));
+    margin-left: rem(24);
     font-size: rem(40);
   }
 }

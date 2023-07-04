@@ -4,7 +4,7 @@
   background-color: $green1;
   padding: rem(46) 0 rem(70);
   @include mq("md") {
-    padding-top: rem(80) 0;
+    padding: rem(80) 0;
   }
 }
 

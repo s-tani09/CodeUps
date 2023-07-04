@@ -39,6 +39,7 @@
   width: rem(80);
   height: rem(80);
   top: rem(22);
+  transition: opacity 0.3s;
 }
 
 .campaign-button-prev::after,
@@ -60,6 +61,11 @@
 
 .campaign-button-next::after {
   background-image: url(../images/common/arrow-right.png);
+}
+
+.campaign-button-prev:hover,
+.campaign-button-next:hover {
+  opacity: 0.7;
 }
 
 .swiper-button-prev,

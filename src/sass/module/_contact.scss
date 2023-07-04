@@ -135,7 +135,7 @@
 .contact__button {
   margin-top: rem(35);
   @include mq("md") {
-    margin-top: rem(16);
+    margin-top: rem(32);
     margin-left: rem(16);
   }
 }

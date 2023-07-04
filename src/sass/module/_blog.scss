@@ -45,7 +45,7 @@
   }
 }
 
-.blog__title {
+.blog__heading {
   @include mq("md") {
     margin-top: rem(10);
   }

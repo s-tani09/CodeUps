@@ -12,9 +12,9 @@
 }
 
 .footer-nav__left {
-  width: calc(50% - rem(5));
+  width: 51%;
   @include mq("md") {
-    width: calc(50% - rem(14));
+    width: 49%;
     display: flex;
     flex-direction: column;
     height: rem(234);
@@ -25,11 +25,11 @@
 }
 
 .footer-nav__right {
-  margin-left: rem(10);
-  width: calc(50% - rem(5));
+  margin-left: rem(11);
+  width: 47%;
   @include mq("md") {
     margin-left: rem(28);
-    width: calc(50% - rem(14));
+    width: 48.7%;
     display: flex;
     flex-direction: column;
     height: rem(234);
