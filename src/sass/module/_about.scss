@@ -12,7 +12,7 @@
     height: rem(181);
     bottom: rem(-90);
     right: calc(50% - min(48.5vw, rem(640)));
-    background-image: url(../images/common/sango.png);
+    background-image: url(../images/common/coral.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -77,6 +77,7 @@
   font-weight: $regular;
   line-height: 1;
   color: $green1;
+  text-transform: capitalize;
   @include mq("md") {
     width: 50%;
     font-size: rem(80);

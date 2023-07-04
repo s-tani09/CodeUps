@@ -6,7 +6,6 @@
     display: flex;
     gap: 4.4%;
     width: 100%;
-    // margin: auto;
   }
 }
 
@@ -57,10 +56,4 @@
 .information-box__button {
   text-align: center;
   margin-top: rem(40);
-}
-
-.information-box__items--reverse {
-  @include mq("md") {
-    flex-direction: row-reverse;
-  }
 }

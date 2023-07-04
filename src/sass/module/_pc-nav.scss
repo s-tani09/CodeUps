@@ -18,21 +18,19 @@
   display: grid;
   place-items: center;
   height: inherit;
-  padding-left: rem(13);
-  padding-right: rem(13);
-  // padding-left: clamp(1rem, 1.389vw, 1.25rem);
-  // padding-right: clamp(1rem, 1.389vw, 1.25rem);
+  padding-left: clamp(rem(16), 1.4vw, rem(20));
+  padding-right: clamp(rem(16), 1.4vw, rem(20));
 }
 
 .pc-nav__item a:hover {
   opacity: 1;
 }
 
-.pc-nav__item-wrap {
+.pc-nav__item-wrapper {
   position: relative;
 }
 
-.pc-nav__item-wrap::after {
+.pc-nav__item-wrapper::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -40,15 +38,19 @@
   background-color: $white;
   bottom: rem(-4);
   left: 0;
-  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform: scale(0, 1);
   transform-origin: center top;
   transition: transform 0.3s;
 }
 
-.pc-nav__item a:hover .pc-nav__item-wrap::after {
+.pc-nav__item a:hover .pc-nav__item-wrapper::after {
   @include mq("md") {
     transform: scale(1, 1);
   }
+}
+
+.pc-nav__item.pc-nav__item--uppercase a {
+  text-transform: uppercase;
 }
 
 .pc-nav__item-en {
@@ -60,10 +62,6 @@
 
 .pc-nav__item-en::first-letter {
   text-transform: capitalize;
-}
-
-.pc-nav__item.pc-nav__item--uppercase a {
-  text-transform: uppercase;
 }
 
 .pc-nav__item-jp {
