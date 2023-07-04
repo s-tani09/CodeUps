@@ -57,7 +57,7 @@
 
 .loading__image {
   display: flex;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -69,12 +69,8 @@
 .loading__image-left {
   width: 50%;
   height: 100vh;
-  aspect-ratio: 187.5/667;
   transition: opacity 0.3s ease-out;
   opacity: 0;
-  @include mq("md") {
-    aspect-ratio: 720/768;
-  }
 }
 
 .loading__fadeUpLeft {
@@ -96,12 +92,8 @@
 .loading__image-right {
   width: 50%;
   height: 100vh;
-  aspect-ratio: 187.5/667;
   transition: opacity 0.3s ease-out;
   opacity: 0;
-  @include mq("md") {
-    aspect-ratio: 720/768;
-  }
 }
 
 .loading__fadeUpRight {
