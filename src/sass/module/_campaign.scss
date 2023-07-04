@@ -5,7 +5,7 @@
 }
 
 .campaign__slider {
-  margin-top: rem(24);
+  margin-top: rem(32);
   margin-right: calc(50% - 50vw);
   padding-bottom: rem(10);
 
@@ -31,4 +31,45 @@
   @include mq("md") {
     aspect-ratio: 333 / 223;
   }
+}
+
+// 前へ次への矢印
+.campaign-button-prev,
+.campaign-button-next {
+  width: rem(80);
+  height: rem(80);
+  top: rem(22);
+}
+
+.campaign-button-prev::after,
+.campaign-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(80);
+  width: rem(80);
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.campaign-button-prev::after {
+  background-image: url(../images/common/arrow-left.png);
+}
+
+.campaign-button-next::after {
+  background-image: url(../images/common/arrow-right.png);
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, 76.5%);
+  right: auto;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 2%);
+  left: auto;
 }

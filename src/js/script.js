@@ -16,8 +16,8 @@ jQuery(function ($) {
         $(".loading__image").addClass("is-hidden");
         $(".header").addClass("color");
         loadingElement.hide();
-      }, 5000);
-    }, 5000);
+      }, 3000);
+    }, 3000);
   });
 });
 
@@ -99,7 +99,7 @@ box.each(function () {
   color.on("inview", function () {
     if (counter == 0) {
       $(this)
-        .delay(500)
+        .delay(200)
         .animate({ width: "100%" }, speed, function () {
           image.css("opacity", "1");
           $(this).css({ left: "0", right: "auto" });
@@ -110,26 +110,41 @@ box.each(function () {
   });
 });
 
-// ボタンをクリックしたらスクロールして上に戻る
-// topBtn.click(function () {
-//   $("body,html").animate(
-//     {
-//       scrollTop: 0,
-//     },
-//     500,
-//     "swing"
-//   );
-//   return false;
-// });
+// ページトップボタン
+$(window).on("scroll", function () {
+  let scrollHeight = $(document).height();
+  let scrollPosition = $(window).height() + $(window).scrollTop();
+  let footHeight = $("footer").innerHeight();
+  if (scrollHeight - scrollPosition <= footHeight) {
+    $(".js-page-top").css({
+      position: "absolute",
+      bottom: footHeight + 19,
+    });
+  } else {
+    $(".js-page-top").css({
+      position: "fixed",
+      bottom: "16px",
+    });
+    9;
+  }
+});
 
-// スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-
-// $(document).on("click", 'a[href*="#"]', function () {
-//   let time = 400;
-//   let header = $("header").innerHeight();
-//   let target = $(this.hash);
-//   if (!target.length) return;
-//   let targetY = target.offset().top - header;
-//   $("html,body").animate({ scrollTop: targetY }, time, "swing");
-//   return false;
-// });
+let topBtn = $(".js-page-top");
+topBtn.hide();
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 200) {
+    topBtn.fadeIn();
+  } else {
+    topBtn.fadeOut();
+  }
+});
+topBtn.click(function () {
+  $("body,html").animate(
+    {
+      scrollTop: 0,
+    },
+    500,
+    "swing"
+  );
+  return false;
+});

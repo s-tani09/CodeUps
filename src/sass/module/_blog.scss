@@ -19,6 +19,7 @@
 
 .blog__bg-image img {
   @include mq("md") {
+    aspect-ratio: 1440/500;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -33,17 +34,22 @@
   @include mq("md") {
     content: "";
     position: absolute;
-    width: rem(301);
-    height: rem(138);
+    width: rem(437);
+    height: rem(201);
     top: rem(-76);
-    left: calc(50% - min(48.5vw, rem(600)));
-    background-image: url(../images/common/contact-fish.png);
+    left: calc(50% - min(48.5vw, rem(619.2)));
+    background-image: url(../images/common/blog-fish.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
 }
 
+.blog__title {
+  @include mq("md") {
+    margin-top: rem(10);
+  }
+}
 .blog__cards {
   margin-top: rem(26);
   padding: 0 rem(6);

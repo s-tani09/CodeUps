@@ -3,6 +3,6 @@
 .top-blog {
   margin-top: rem(85);
   @include mq("md") {
-    margin-top: rem(-11);
+    margin-top: rem(0);
   }
 }

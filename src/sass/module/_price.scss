@@ -19,8 +19,8 @@
     position: absolute;
     width: rem(437);
     height: rem(201);
-    bottom: rem(-54.4);
-    left: calc(50% - min(48.5vw, rem(624)));
+    bottom: rem(-49.6);
+    left: calc(50% - min(48.5vw, rem(619.2)));
     background-image: url(../images/common/price-fish.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -66,6 +66,6 @@
   margin-top: rem(41);
   text-align: center;
   @include mq(md) {
-    margin-top: rem(78);
+    margin-top: rem(84);
   }
 }
