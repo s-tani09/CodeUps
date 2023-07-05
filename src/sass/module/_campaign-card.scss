@@ -48,7 +48,7 @@
   font-size: rem(16);
   font-weight: $medium;
   line-height: 1;
-  padding-bottom: rem(3);
+  padding-bottom: rem(8);
   border-bottom: rem(1) solid $green1;
   @include mq("md") {
     margin-top: rem(11);
@@ -75,7 +75,7 @@
 }
 
 .campaign-card__price {
-  margin-top: rem(3);
+  margin-top: rem(4);
   display: flex;
   align-items: center;
   justify-content: center;

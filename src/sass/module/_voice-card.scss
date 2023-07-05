@@ -54,10 +54,10 @@
 }
 
 .voice-card__title {
-  margin-top: rem(4);
+  margin-top: rem(10);
   font-weight: $medium;
   line-height: 1.5;
-
+  font-size: rem(16);
   @include mq("md") {
     margin-top: rem(11);
     font-size: rem(24);
