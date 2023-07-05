@@ -23,7 +23,7 @@
 .blog-card__body {
   margin-top: rem(22);
   @include mq("md") {
-    margin-top: rem(20);
+    margin-top: rem(16);
   }
 }
 
