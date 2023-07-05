@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .contact {
-  padding: rem(77) 0 rem(107);
+  padding: rem(80) 0 rem(107);
   @include mq("md") {
     padding: rem(137) 0 rem(160);
   }
@@ -26,7 +26,7 @@
   @include mq("md") {
     width: rem(301);
     height: rem(138);
-    top: rem(-35.2);
+    top: rem(-44);
     right: calc(50% - min(48.5vw, rem(670.4)));
   }
 }
@@ -53,9 +53,6 @@
 .contact__logo {
   text-align: center;
   border-bottom: 1px solid $green1;
-  @include mq("md") {
-    padding-bottom: rem(6.4);
-  }
 }
 
 .contact__logo img {
@@ -135,7 +132,7 @@
 .contact__button {
   margin-top: rem(35);
   @include mq("md") {
-    margin-top: rem(32);
+    margin-top: rem(16);
     margin-left: rem(16);
   }
 }

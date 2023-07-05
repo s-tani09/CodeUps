@@ -81,7 +81,7 @@
   justify-content: center;
   font-family: $second-font-family;
   font-weight: $bold;
-  @include mq(md) {
+  @include mq("md") {
     margin-top: rem(2);
   }
 }

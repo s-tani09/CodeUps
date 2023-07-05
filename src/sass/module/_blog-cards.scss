@@ -4,8 +4,7 @@
   @include mq("md") {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: rem(40);
-    row-gap: rem(80);
+    gap: rem(40);
   }
 }
 

@@ -29,7 +29,7 @@
   @include mq("md") {
     margin-top: 0;
     margin-left: rem(40);
-    padding-bottom: rem(5);
+    padding-bottom: rem(9);
   }
 }
 
@@ -49,7 +49,7 @@
 .footer__nav {
   margin-top: rem(30);
   @include mq("md") {
-    margin-top: rem(16);
+    margin-top: rem(14);
   }
 }
 
@@ -61,5 +61,6 @@
   color: $white;
   @include mq("md") {
     margin-top: rem(55);
+    font-size: rem(14);
   }
 }
