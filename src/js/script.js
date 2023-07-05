@@ -16,8 +16,8 @@ jQuery(function ($) {
         $(".loading__image").addClass("is-hidden");
         $(".header").addClass("color");
         loadingElement.hide();
-      }, 3000);
-    }, 3000);
+      }, 3700);
+    }, 3700);
   });
 });
 
@@ -47,13 +47,12 @@ function closeDrawer() {
 // スライダー
 var swiper = new Swiper(".js-mv-slider", {
   loop: true,
-  effect: "fade", // フェード切り替え
-  // 自動再生
+  effect: "fade",
   autoplay: {
-    delay: 4000, // 4秒後に次のスライドへ
-    disableOnInteraction: false, // ユーザーが操作しても自動再生を継続
+    delay: 4000,
+    disableOnInteraction: false,
   },
-  speed: 2000, // 2秒かけてフェード
+  speed: 2000,
 });
 
 var swiper = new Swiper(".js-campaign-swiper", {
