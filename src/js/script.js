@@ -26,7 +26,7 @@ jQuery(function ($) {
           // ローディングが完了した後の処理
 
           // Swiperの初期化などの必要な処理を行う
-          const swiper1 = new Swiper(".js-mv__slider", {
+          const swiper = new Swiper(".js-mv__slider", {
             loop: true,
             speed: 2000,
             autoplay: {
