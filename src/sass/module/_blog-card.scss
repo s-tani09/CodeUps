@@ -8,9 +8,14 @@
 .blog-card a {
   display: inline-block;
   padding: rem(16) rem(16) rem(20);
+  transition: opacity 0.3s;
   @include mq("md") {
     padding-bottom: rem(21);
   }
+}
+
+.blog-card a:hover {
+  opacity: 0.8;
 }
 
 .blog-card__image img {

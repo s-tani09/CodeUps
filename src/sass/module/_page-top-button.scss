@@ -16,6 +16,14 @@
   }
 }
 
+.page-top-button a {
+  transition: opacity 0.3s;
+}
+
+.page-top-button a:hover {
+  opacity: 0.7;
+}
+
 .page-top-button img {
   transform: rotate(-90deg);
 }

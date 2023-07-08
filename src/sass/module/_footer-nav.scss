@@ -55,6 +55,12 @@
   color: $white;
   font-weight: $regular;
   line-height: 1.125;
+  transition: opacity 0.3s;
+}
+
+.footer-nav__left-item a:hover,
+.footer-nav__right-item a:hover {
+  opacity: 0.8;
 }
 
 .footer-nav__left-item:first-child a,

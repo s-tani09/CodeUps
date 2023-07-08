@@ -65,18 +65,19 @@
 }
 
 .header__drawer {
-  width: rem(45);
-  height: rem(24);
   position: fixed;
-  cursor: pointer;
-  top: 4%;
-  right: 2.3%;
   z-index: 9999;
+  top: rem(40);
+  right: rem(15);
+  width: rem(33);
+  height: rem(24);
+  cursor: pointer;
 }
 
 .header__drawer span {
-  position: relative;
-  display: block;
+  position: absolute;
+  display: inline-block;
+  left: 0;
   width: rem(33);
   height: rem(1);
   background-color: $white;
@@ -85,7 +86,7 @@
 }
 
 .header__drawer span:nth-of-type(1) {
-  top: rem(-11);
+  top: rem(-12);
 }
 
 .header__drawer span:nth-of-type(2) {
@@ -94,7 +95,7 @@
 }
 
 .header__drawer span:nth-of-type(3) {
-  top: rem(11);
+  top: rem(12);
 }
 
 .header__drawer.is-active span:nth-of-type(1) {
