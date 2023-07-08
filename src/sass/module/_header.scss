@@ -74,6 +74,11 @@
   cursor: pointer;
 }
 
+.header__drawer.is-active {
+  top: rem(40);
+  right: rem(15);
+}
+
 .header__drawer span {
   position: absolute;
   display: inline-block;
