@@ -25,9 +25,11 @@
   flex-direction: column;
   position: absolute;
   top: 43.8%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  // width: 100%;
+  // margin-left: auto;
+  // margin-right: auto;
+  left: 50%;
+  transform: translate(-48%, -48%);
   color: $green1;
   z-index: 2000;
   @include mq("md") {
