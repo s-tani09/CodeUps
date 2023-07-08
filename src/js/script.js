@@ -74,7 +74,7 @@ var swiper = new Swiper(".js-campaign-swiper", {
     delay: 1000,
     disableOnInteraction: false,
   },
-  // Navigation arrows
+
   navigation: {
     nextEl: ".js-campaign-button-next",
     prevEl: ".js-campaign-button-prev",
