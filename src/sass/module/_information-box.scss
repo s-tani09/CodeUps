@@ -26,29 +26,25 @@
   margin-top: rem(27);
   max-width: rem(600);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   @include mq("md") {
     width: 45.6%;
-    margin-top: rem(6);
-    padding: rem(61) 0;
+    margin-top: rem(56);
   }
 }
 
 .information-box__title {
   font-size: rem(20);
   font-weight: $bold;
-  line-height: 1.2;
+  line-height: 1.25;
   border-bottom: rem(1) solid $green1;
-  padding-bottom: rem(2);
   @include mq("md") {
     font-size: rem(24);
-    line-height: 1;
+    line-height: 1.5;
   }
 }
 
 .information-box__text {
-  margin-top: rem(11.2);
+  margin-top: rem(9.6);
   font-size: rem(16);
   line-height: 1.5;
   font-weight: $regular;
