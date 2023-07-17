@@ -37,6 +37,10 @@
   margin-left: rem(16);
 }
 
+.footer__snsLink a:hover {
+  opacity: 0.8;
+}
+
 .footer__snsLink img {
   width: rem(24);
   height: rem(24);
