@@ -44,6 +44,12 @@ function closeDrawer() {
   $(".js-hamburger").removeClass("is-active");
 }
 
+$(document).ready(function () {
+  $(".js-hamburger,.js-sp-nav").click(function () {
+    $(".js-header").toggleClass("is-active");
+  });
+});
+
 // スライダー
 var swiper = new Swiper(".js-mv-slider", {
   loop: true,

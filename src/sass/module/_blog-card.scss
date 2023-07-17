@@ -28,7 +28,7 @@
 .blog-card__body {
   margin-top: rem(22);
   @include mq("md") {
-    margin-top: rem(16);
+    margin-top: rem(19);
   }
 }
 
@@ -38,6 +38,11 @@
   line-height: 1;
 }
 
+.blog-card__text-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
 .blog-card__title {
   font-size: rem(16);
   font-weight: $medium;

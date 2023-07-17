@@ -2,7 +2,7 @@
 
 .footer {
   background-color: $green1;
-  padding: rem(46) 0 rem(70);
+  padding: rem(48) 0 rem(70);
   @include mq("md") {
     padding: rem(80) 0;
   }
@@ -54,13 +54,17 @@
 }
 
 .footer__copyright {
-  margin-top: rem(26);
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin-top: rem(21);
+  @include mq("md") {
+    margin-top: rem(55);
+  }
+}
+
+.footer__copyright small {
   font-size: rem(12);
   color: $white;
   @include mq("md") {
-    margin-top: rem(55);
     font-size: rem(14);
   }
 }

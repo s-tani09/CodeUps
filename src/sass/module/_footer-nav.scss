@@ -86,7 +86,6 @@
 .footer-nav__left-items + .footer-nav__left-items,
 .footer-nav__right-items + .footer-nav__right-items {
   margin-top: rem(16);
-
   @include mq("md") {
     margin-top: 0;
   }

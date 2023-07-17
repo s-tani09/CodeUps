@@ -3,11 +3,12 @@
 .sp-nav {
   background-color: $green1;
   overflow-y: scroll;
+  top: rem(80);
 }
 
 .sp-nav__inner {
   display: flex;
-  padding: rem(96) rem(15) rem(90);
+  padding: rem(16) rem(15) rem(90);
 }
 
 .sp-nav__left,

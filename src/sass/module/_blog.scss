@@ -36,7 +36,7 @@
     position: absolute;
     width: rem(437);
     height: rem(201);
-    top: rem(-76);
+    top: rem(-77);
     left: calc(50% - min(48.5vw, rem(619.2)));
     background-image: url(../images/common/blog-fish.png);
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@
   }
 }
 
-.blog__heading {
+.blog__title {
   @include mq("md") {
     margin-top: rem(10);
   }
@@ -55,7 +55,7 @@
   padding: 0 rem(6);
   @include mq("md") {
     padding: 0;
-    margin-top: rem(88);
+    margin-top: rem(78);
   }
 }
 
