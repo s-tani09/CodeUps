@@ -53,17 +53,18 @@
   }
 }
 .sub-mv__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-family: $second-font-family;
   font-size: rem(40);
   font-weight: $regular;
   line-height: 1.2;
-  text-transform: capitalize;
   color: $white;
   @include mq("md") {
     font-size: rem(80);
     line-height: 1.25;
   }
+}
+
+.sub-mv__title::first-letter {
+  text-transform: capitalize;
 }

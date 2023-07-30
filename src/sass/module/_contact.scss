@@ -1,10 +1,6 @@
 @use "global" as *;
 
 .contact {
-  padding: rem(80) 0 rem(107);
-  @include mq("md") {
-    padding: rem(137) 0 rem(160);
-  }
 }
 
 .contact__inner {

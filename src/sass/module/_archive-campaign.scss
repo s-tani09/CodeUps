@@ -6,3 +6,12 @@
     margin-top: rem(150);
   }
 }
+
+.archive-campaign__cards {
+  padding-left: rem(33);
+  padding-right: rem(33);
+  @include mq("md") {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

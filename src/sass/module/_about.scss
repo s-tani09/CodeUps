@@ -19,6 +19,41 @@
   }
 }
 
+.about__inner.about__inner--sub::before {
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-24);
+  left: rem(15);
+  z-index: 1;
+  background-image: url(../images/common/sub-fish.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include mq("md") {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: rem(15);
+    left: calc(50% - min(49vw, rem(620.8)));
+  }
+}
+.about__inner.about__inner--sub::after {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    width: rem(301);
+    height: rem(138);
+    bottom: rem(-175);
+    right: calc(50% - min(48.5vw, rem(640)));
+    background-image: url(../images/common/fish-right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
 .about__image-box {
   margin-top: rem(30);
   @include mq("md") {
@@ -49,6 +84,17 @@
   z-index: 1;
 }
 
+.about__image-large.about__image-large--sub {
+  margin-top: 0;
+  width: 100%;
+  @include mq("md") {
+    width: 81.5%;
+    margin-top: -48.5%;
+    margin-left: auto;
+    z-index: 1;
+  }
+}
+
 .about__image-large img {
   aspect-ratio: 281 / 186;
   object-fit: cover;
@@ -72,6 +118,14 @@
   }
 }
 
+.about__content-box.about__content-box--sub {
+  display: contents;
+  @include mq("md") {
+    display: flex;
+    margin-top: rem(-67);
+  }
+}
+
 .about__heading {
   font-size: rem(40);
   font-weight: $regular;
@@ -85,12 +139,29 @@
   }
 }
 
+.about__heading.about__heading--sub {
+  position: absolute;
+  top: rem(24);
+  left: rem(39);
+  color: $white;
+  @include mq("md") {
+    position: static;
+  }
+}
+
 .about__text-box {
   margin-top: rem(19);
   @include mq("md") {
     margin-top: 0;
     margin-left: rem(35);
     width: 50%;
+  }
+}
+
+.about__text-box.about__text-box--sub {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(52);
   }
 }
 

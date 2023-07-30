@@ -18,7 +18,7 @@
   font-size: rem(16);
   border: rem(1) solid $green1;
   transition: 0.3s ease;
-  margin: 0 rem(6);
+  margin: 0 rem(4);
   padding: rem(6) rem(12);
 }
 
@@ -76,8 +76,8 @@
 }
 
 .wp-pagenavi .nextpostslink {
-  // margin-left: rem(30);
-  // margin-right: 0;
+  margin-left: rem(30);
+  margin-right: 0;
   position: relative;
 }
 
