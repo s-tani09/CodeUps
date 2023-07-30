@@ -1,0 +1,102 @@
+@use "global" as *;
+
+.wp-pagenavi {
+  clear: both;
+  text-align: center;
+}
+.wp-pagenavi a,
+.wp-pagenavi span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(38);
+  height: rem(38);
+  background-color: $white;
+  color: $green1;
+  font-family: $second-font-family;
+  font-weight: $bold;
+  font-size: rem(16);
+  border: rem(1) solid $green1;
+  transition: 0.3s ease;
+  margin: 0 rem(6);
+  padding: rem(6) rem(12);
+}
+
+.wp-pagenavi a:hover {
+  color: $white;
+  background-color: $green1;
+  opacity: 1;
+}
+
+.wp-pagenavi span.current {
+  color: $white;
+  background-color: $green1;
+}
+
+.wp-pagenavi .previouspostslink:hover::after {
+  border-top: rem(1) solid $white;
+  border-left: rem(1) solid $white;
+  background-color: $green1;
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.wp-pagenavi .nextpostslink:hover::after {
+  border-bottom: rem(1) solid $white;
+  border-right: rem(1) solid $white;
+  background-color: $green1;
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.wp-pagenavi a:hover,
+.wp-pagenavi span:hover {
+  color: $white;
+  background-color: $green1;
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.wp-pagenavi .previouspostslink {
+  margin-right: rem(30);
+  margin-left: 0;
+  position: relative;
+}
+
+.wp-pagenavi .previouspostslink::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(10);
+  width: rem(10);
+  height: rem(10);
+  border-top: rem(1) solid $green1;
+  border-left: rem(1) solid $green1;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.wp-pagenavi .nextpostslink {
+  // margin-left: rem(30);
+  // margin-right: 0;
+  position: relative;
+}
+
+.wp-pagenavi .nextpostslink::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  right: rem(10);
+  width: rem(10);
+  height: rem(10);
+  border-bottom: rem(1) solid $green1;
+  border-right: rem(1) solid $green1;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.wp-pagenavi .larger {
+  display: none;
+  @include mq("md") {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.sub-mv {
+  height: rem(460);
+  width: 100%;
+  @include mq("md") {
+    height: rem(548);
+  }
+}
+
+.sub-mv__inner {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+.sub-mv__image {
+  height: inherit;
+  position: relative;
+}
+
+.sub-mv__image picture,
+.sub-mv__image img {
+  height: inherit;
+}
+
+.sub-mv::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: $green1, $alpha: 0.3);
+}
+
+.sub-mv__image img {
+  aspect-ratio: 375/460;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 1440/548;
+  }
+}
+
+.sub-mv__heading {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  @include mq("md") {
+    top: 50%;
+  }
+}
+.sub-mv__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $second-font-family;
+  font-size: rem(40);
+  font-weight: $regular;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: $white;
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: 1.25;
+  }
+}

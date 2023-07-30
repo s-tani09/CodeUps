@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.fish {
+  position: relative;
+}
+
+.fish::before {
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(50);
+  top: rem(-148);
+  left: rem(15);
+  z-index: 1;
+  background-image: url(../images/common/sub-fish.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  @include mq("md") {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-143);
+    left: calc(50% - min(49vw, rem(620.8)));
+  }
+}
