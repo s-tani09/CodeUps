@@ -1,8 +1,5 @@
 @use "global" as *;
 
-.tab-menu {
-}
-
 .tab-menu__lists {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -14,7 +11,7 @@
 
 .tab-menu__list {
   text-align: center;
-  max-width: rem(102);
+  max-width: rem(300);
   width: 100%;
   padding: rem(10);
   box-shadow: rem(4) rem(4) rem(10) rgba($color: $black1, $alpha: 0.25);
@@ -24,9 +21,7 @@
   color: $green1;
   background-color: $gray2;
   @include mq("md") {
-    max-width: rem(300);
-    width: 100%;
-    padding: rem(31) rem(18) rem(21);
+    padding: rem(31) rem(5) rem(21);
     position: relative;
     font-size: rem(24);
     line-height: calc(35 / 24);

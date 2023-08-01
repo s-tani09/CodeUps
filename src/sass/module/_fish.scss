@@ -8,10 +8,10 @@
   content: "";
   position: absolute;
   width: rem(120);
-  height: rem(50);
+  height: rem(55);
   top: rem(-148);
   left: rem(15);
-  z-index: 1;
+  z-index: -1;
   background-image: url(../images/common/sub-fish.png);
   background-repeat: no-repeat;
   background-position: top center;

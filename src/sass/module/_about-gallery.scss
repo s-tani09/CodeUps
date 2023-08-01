@@ -54,3 +54,37 @@
     aspect-ratio: 492 / 746;
   }
 }
+
+// モーダル
+.about-gallery__modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  background: rgba($color: #202020, $alpha: 0.8);
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.about-gallery__modal img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  height: 80%;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 920/586;
+    max-width: rem(920);
+    width: 100%;
+  }
+}

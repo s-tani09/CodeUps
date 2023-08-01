@@ -115,6 +115,42 @@ box.each(function () {
   });
 });
 
+$(function () {
+  // 最初のコンテンツは表示
+  $(".js-information-content:first-of-type").css("display", "block");
+  // タブをクリックすると
+  $(".js-information-tab").on("click", function () {
+    // 現在選択されているタブからcurrentを外す
+    $(".current").removeClass("current");
+    // クリックされたタブにcurrentクラスを付与
+    $(this).addClass("current");
+    // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+    const index = $(this).index();
+    // クリックしたタブのインデックス番号と同じコンテンツを表示
+    $(".js-information-content").hide().eq(index).fadeIn(300);
+  });
+});
+
+// モーダル表示;
+let scrollPosition;
+$(".js-modal").click(function () {
+  scrollPosition = $(window).scrollTop();
+  $(".js-modal-window").html($(this).prop("outerHTML"));
+  $(".js-modal-window").fadeIn(300);
+  $(".js-header, .js-page-top").hide();
+  $("html").addClass("is-fixed");
+  return false;
+});
+// モーダル非表示
+$(".js-modal-window").click(function () {
+  $(".js-modal-window").fadeOut(300, function () {
+    $(".js-header, .js-page-top").fadeIn();
+    $("html").removeClass("is-fixed");
+    $(window).scrollTop(scrollPosition);
+  });
+  return false;
+});
+
 // ページトップボタン
 $(window).on("scroll", function () {
   let scrollHeight = $(document).height();

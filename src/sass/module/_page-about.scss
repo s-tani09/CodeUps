@@ -1,0 +1,164 @@
+@use "global" as *;
+
+.page-about__inner {
+  position: relative;
+}
+
+.page-about__inner::before {
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-24);
+  left: rem(15);
+  z-index: 1;
+  background-image: url(../images/common/sub-fish.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include mq("md") {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: rem(15);
+    left: calc(50% - min(49vw, rem(620.8)));
+  }
+}
+.page-about__inner::after {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    width: rem(301);
+    height: rem(138);
+    bottom: rem(-175);
+    right: calc(50% - min(48.5vw, rem(640)));
+    background-image: url(../images/common/fish-right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.page-about__image-box {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.page-about__image-small {
+  width: 37.1014%;
+  position: relative;
+  z-index: 2;
+}
+
+.page-about__image-small img {
+  aspect-ratio: 128 / 194;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  @include mq("md") {
+    aspect-ratio: 400 / 606;
+  }
+}
+
+.page-about__image-large {
+  width: 81.5%;
+  margin-top: -48.5%;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.page-about__image-large {
+  margin-top: 0;
+  width: 100%;
+  @include mq("md") {
+    width: 81.5%;
+    margin-top: -48.5%;
+    margin-left: auto;
+    z-index: 1;
+  }
+}
+
+.page-about__image-large img {
+  aspect-ratio: 281 / 186;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  @include mq("md") {
+    aspect-ratio: 880 / 581;
+  }
+}
+
+.page-about__content-box {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: 0;
+    width: 74.78%;
+    position: absolute;
+    top: 40.5%;
+    left: 19.8%;
+    z-index: 2;
+    display: flex;
+  }
+}
+
+.page-about__content-box {
+  display: contents;
+  @include mq("md") {
+    display: flex;
+    margin-top: rem(-67);
+  }
+}
+
+.page-about__heading {
+  font-size: rem(40);
+  font-weight: $regular;
+  line-height: 1;
+  color: $green1;
+  @include mq("md") {
+    width: 50%;
+    font-size: rem(80);
+    line-height: 1.25;
+    color: $white;
+  }
+}
+
+.page-about__heading {
+  position: absolute;
+  top: rem(24);
+  left: rem(39);
+  color: $white;
+  @include mq("md") {
+    position: static;
+  }
+}
+
+.page-about__text-box {
+  margin-top: rem(19);
+  @include mq("md") {
+    margin-top: 0;
+    margin-left: rem(35);
+    width: 50%;
+  }
+}
+
+.page-about__text-box {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(52);
+  }
+}
+
+.page-about__text {
+  line-height: 1.5;
+  color: $black1;
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+// .page-about__button {
+//   margin-top: rem(40);
+//   text-align: center;
+// }
