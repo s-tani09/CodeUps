@@ -7,6 +7,13 @@
     gap: rem(40);
   }
 }
+.blog-cards.blog-cards--2rows {
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+  }
+}
 
 .blog-cards__item + .blog-cards__item {
   margin-top: rem(40);

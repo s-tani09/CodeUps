@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.blog-sidebar-cards {
+  display: grid;
+  gap: rem(24);
+}
+
+.blog-sidebar-cards__item {
+  margin-top: rem(24);
+}

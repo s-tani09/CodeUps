@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.blog-sidebar__inner {
+  max-width: rem(520);
+  width: 100%;
+  margin: auto;
+  display: grid;
+  gap: rem(80);
+  padding: 0 rem(26);
+  @include mq("md") {
+    max-width: rem(294);
+    padding: initial;
+  }
+}
+
+.blog-sidebar__heading {
+  margin-left: rem(74);
+  position: relative;
+}
+
+.blog-sidebar__title {
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $regular;
+}
+
+.blog-sidebar__cards {
+  margin-top: rem(24);
+}

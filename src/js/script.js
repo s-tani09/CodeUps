@@ -131,6 +131,23 @@ $(function () {
   });
 });
 
+// let scrollPosition;
+// $(".js-modal img").click(function () {
+//   $(".js-modal-window").html($(this).prop("outerHTML"));
+//   $(".js-modal-window").fadeIn(100);
+//   $(".header").fadeOut();
+//   $(".js-page-top").fadeOut();
+//   scrollPosition = $(window).scrollTop();
+//   $("body").addClass("fixed").css({ top: -scrollPosition });
+// });
+// $(".js-modal-window, .js-modal-window img").click(function () {
+//   $(".js-modal-window").fadeOut(100);
+//   $(".header").fadeIn();
+//   $(".js-page-top").fadeIn();
+//   $("body").removeClass("fixed").css({ top: 0 });
+//   window.scrollTo(0, scrollPosition);
+// });
+
 // モーダル表示;
 let scrollPosition;
 $(".js-modal").click(function () {
