@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.voice-lists__item {
+  margin-top: rem(24);
+  max-width: rem(294);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

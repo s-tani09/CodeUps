@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.voice-list__image img {
+  aspect-ratio: 294 / 218;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.voice-list__body {
+  margin-top: rem(21);
+}
+
+.voice-list__age {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: rem(12);
+  line-height: 1;
+  color: $black;
+}
+
+.voice-list__title {
+  margin-top: rem(15);
+  font-size: rem(24);
+  font-weight: $medium;
+  line-height: 1.45833;
+}
+
+.voice-list__button {
+  margin-top: rem(40);
+  text-align: center;
+}

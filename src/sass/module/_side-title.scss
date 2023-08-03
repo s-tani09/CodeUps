@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.side-title {
+  text-align: left;
+}
+
+.side-title__main {
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $regular;
+  // border-left: rem(8) solid $green1;
+  padding: rem(12) rem(8) rem(3) rem(80);
+  position: relative;
+}
+
+.side-title__main::before {
+  content: "";
+  position: absolute;
+  width: rem(8);
+  height: 100%;
+  background-color: $green1;
+  top: rem(0);
+  left: rem(-3);
+}
+
+.side-title__main::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: rem(22);
+  width: rem(50);
+  height: rem(50);
+  background-image: url(../images/common/blog-whale.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}

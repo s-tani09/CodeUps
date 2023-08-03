@@ -21,6 +21,10 @@
   }
 }
 
+.campaign__button.campaign__button--sub {
+  margin-top: rem(40);
+}
+
 .campaign__slider .swiper-slide img {
   aspect-ratio: 280 / 188;
   object-fit: cover;
