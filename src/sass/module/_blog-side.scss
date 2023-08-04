@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.blog-side__content {
-  max-width: rem(520);
-  width: 100%;
-  padding: 0 rem(26);
+.blog-side__content + .blog-side__content {
+  margin-top: rem(80);
+}
+
+.blog-side__content.blog-side__content--side {
   @include mq("md") {
-    max-width: rem(294);
-    padding: initial;
+    margin-top: rem(89);
   }
 }
 
@@ -21,7 +21,20 @@
 .blog-side__campaign {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1.5rem;
+  margin-top: rem(30);
   max-width: rem(294);
   width: 100%;
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.blog-side__archive {
+  margin-top: rem(30);
+}
+
+.blog-side__content.blog-side__content--archive {
+  @include mq("md") {
+    margin-top: rem(90);
+  }
 }

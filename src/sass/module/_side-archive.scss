@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.side-archive__year {
+  margin-top: rem(5);
+}
+
+.side-archive__year span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: rem(24);
+  line-height: 1;
+  color: $green1;
+  padding-left: rem(32);
+  position: relative;
+}
+
+.side-archive__year span::before {
+  content: "";
+  position: absolute;
+  width: rem(17);
+  height: rem(20);
+  top: 53%;
+  left: rem(4);
+  transform: translateY(-50%);
+  background-color: $green1;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  transition: all 0.3s;
+}
+
+.side-archive__year.open span::before {
+  top: 32%;
+  transform: rotate(90deg);
+}
+
+.side-archive__month span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  color: $green1;
+  padding-left: rem(32);
+  position: relative;
+}
+
+.side-archive__month span::before {
+  content: "";
+  position: absolute;
+  width: rem(17);
+  height: rem(20);
+  top: 50%;
+  left: rem(4);
+  transform: translateY(-50%);
+  background-color: $green1;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+.side-archive__items {
+  margin-top: rem(4);
+  padding-left: rem(24);
+}
+
+.side-archive__item + .side-archive__item {
+  margin-top: rem(4);
+}
+
+.side-archive__list + .side-archive__list {
+  margin-top: rem(8);
+}
+/* 特定の月を最初に表示するためのスタイル */
+.side-archive__items {
+  display: none; /* すべての月リストを初めは非表示 */
+}
+
+.side-archive__list:first-of-type
+  .js-side-archive__year.open
+  + .side-archive__items {
+  display: block; /* 最初の年が open クラスを持っている場合に月リストを表示 */
+}

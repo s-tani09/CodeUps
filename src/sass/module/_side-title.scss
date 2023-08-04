@@ -9,7 +9,7 @@
   line-height: calc(35 / 24);
   font-weight: $regular;
   // border-left: rem(8) solid $green1;
-  padding: rem(12) rem(8) rem(3) rem(80);
+  padding: rem(11) rem(8) rem(3) rem(80);
   position: relative;
 }
 
@@ -19,15 +19,15 @@
   width: rem(8);
   height: 100%;
   background-color: $green1;
-  top: rem(0);
-  left: rem(-3);
+  top: 0;
+  left: 0;
 }
 
 .side-title__main::after {
   position: absolute;
   content: "";
-  top: 0;
-  left: rem(22);
+  top: rem(-2);
+  left: rem(24);
   width: rem(50);
   height: rem(50);
   background-image: url(../images/common/blog-whale.png);

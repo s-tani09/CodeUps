@@ -206,3 +206,37 @@ topBtn.click(function () {
   );
   return false;
 });
+
+// アコーディオン(ブログ)
+// $(".side-archive__list:first-of-type .side-archive__month").css(
+//   "display",
+//   "block"
+// );
+// $(".side-archive__list:first-of-type .js-side-archive__year").addClass("open");
+// $(".side-archive__year").on("click", function () {
+//   $(this).next().slideToggle(300);
+//   $(this).toggleClass("open", 300);
+// });
+$(document).ready(function () {
+  // 初期状態で最初の年の月リストを表示し、▶︎を▼に変更
+  $(".side-archive__list:first-of-type .side-archive__month").css(
+    "display",
+    "block"
+  );
+  $(".side-archive__list:first-of-type .js-side-archive__year").addClass(
+    "open"
+  );
+
+  // 最初の年に open クラスを付ける
+  $(".side-archive__list:first-of-type .js-side-archive__year").addClass(
+    "open"
+  );
+
+  // 年要素がクリックされたときの処理
+  $(".js-side-archive__year").on("click", function () {
+    // クリックされた年の次の要素（月リスト）をアニメーション付きで表示/非表示
+    $(this).next().slideToggle(300);
+    // クリックされた年の要素に「open」クラスをトグル（追加/削除）
+    $(this).toggleClass("open", 300);
+  });
+});
