@@ -1,9 +1,10 @@
 @use "global" as *;
+.voice-lists {
+  display: grid;
+  gap: rem(24);
+  grid-template-columns: repeat(1, 1fr);
+}
 
 .voice-lists__item {
   margin-top: rem(24);
-  max-width: rem(294);
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }

@@ -1,5 +1,10 @@
 @use "global" as *;
 
+.voice-list {
+  display: grid;
+  gap: rem(24);
+}
+
 .voice-list__image img {
   aspect-ratio: 294 / 218;
   object-fit: cover;
