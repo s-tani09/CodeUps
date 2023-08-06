@@ -1,37 +1,43 @@
 @use "global" as *;
 
-.page-faq__inner {
+.contact-thanks__inner {
   position: relative;
 }
 
-.page-faq__inner::before {
+.contact-thanks__inner::before {
   content: "";
   position: absolute;
   width: rem(120);
   height: rem(55);
   top: rem(-24);
   left: rem(15);
+  z-index: -1;
   background-image: url(../images/common/sub-fish.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  z-index: 1;
   @include mq("md") {
     width: rem(301);
     height: rem(138);
     top: rem(-70);
     left: calc(50% - min(49vw, rem(620.8)));
-    z-index: -1;
   }
 }
 
-.page-faq__contents {
-  margin-top: rem(52);
-  @include mq("md") {
-    margin-top: rem(150);
-  }
+.contact-thanks__contents {
+  text-align: center;
+}
+.contact-thanks__text {
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(18 / 16);
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-.page-faq__content {
+.contact-thanks__message {
   margin-top: rem(40);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(23 / 16);
 }

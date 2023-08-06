@@ -14,4 +14,9 @@
   line-height: calc(20 / 14);
   font-weight: $regular;
   font-family: "Noto Sans JP", sans-serif;
+  z-index: 2;
+}
+
+.breadcrumbs__item.breadcrumbs__item--white {
+  color: $white;
 }

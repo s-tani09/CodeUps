@@ -243,123 +243,143 @@
         </div>
       </div>
 
-      <div class="page-contact second-page-contact">
-        <div class="page-contact__inner inner">
-          <p class="page-contact__text">
-            Webサイトの制作のご依頼やお見積りなど、<br
-              class="u-mobile"
-            />お気軽にご相談ください。
-          </p>
-          <div class="page-contact__content form">
-            <form action="" method="post" id="">
-              <dl class="form__item">
-                <dt>
-                  お問い合わせ種別<span><sup>*</sup>必須</span>
-                </dt>
-                <dd class="form__radio">
-                  <label
-                    ><input
-                      type="radio"
-                      name="target"
-                      value="ラジオボタン"
-                      checked
-                    /><span>お仕事のご依頼・ご相談</span></label
-                  >
-                  <label
-                    ><input
-                      type="radio"
-                      name="target"
-                      value="ラジオボタン2"
-                    /><span>お見積りのご依頼</span></label
-                  >
-                  <label
-                    ><input
-                      type="radio"
-                      name="target"
-                      value="ラジオボタン3"
-                    /><span>採用について</span></label
-                  >
-                  <label
-                    ><input
-                      type="radio"
-                      name="target"
-                      value="ラジオボタン4"
-                    /><span>その他</span></label
-                  >
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>
-                  お名前&nbsp;<span><sup>*</sup>必須</span>
-                </dt>
-                <dd>
-                  <input type="text" name="company" value="" required />
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>会社名</dt>
-                <dd>
-                  <input type="text" name="company" value="" />
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>
-                  メールアドレス&nbsp;<span><sup>*</sup>必須</span>
-                </dt>
-                <dd>
-                  <input
-                    type="email"
-                    name="mail_address"
-                    value=""
-                    class="validate[]"
-                  />
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>
-                  お電話番号&nbsp;<span class="form__tel-info"
-                    >（半角数字ハイフンなし）</span
-                  >
-                </dt>
-                <dd>
-                  <input
-                    type="tel"
-                    name="telephone"
-                    value=""
-                    class="validate[]"
-                  />
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>
-                  お問い合わせ内容&nbsp;<span><sup>*</sup>必須</span>
-                </dt>
-                <dd>
-                  <textarea name="contents"></textarea>
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>
-                  Codeupsをどちらでお知りになりましたか？&nbsp;<span
-                    ><sup>*</sup>必須</span
-                  >
-                </dt>
-                <dd>
-                  <select name="hoge" class="">
-                    <option value="">選択してください</option>
-                    <option value="セレクト1">Google/Yahoo検索</option>
-                    <option value="セレクト2">SNS</option>
-                    <option value="セレクト3">ブログ</option>
-                    <option value="セレクト4">友人や知人</option>
-                    <option value="セレクト5">その他</option>
-                  </select>
-                </dd>
-              </dl>
-              <div class="form__button">
-                <input type="button" class="button" value="送信する" />
+      <div class="contact-body layout-body">
+        <div class="contact-body__inner inner fish-icon">
+          <form action="" class="contact-body__form form">
+            <div class="form__error is-active">
+              <p class="form__error-text">
+                ※必須項目が入力されていません。<br
+                  class="u-mobile"
+                />入力してください。
+              </p>
+            </div>
+            <ul class="form__list is-active">
+              <li class="form__item">
+                <dl class="form__content-wrap">
+                  <dt class="form__label">お名前<span>必須</span></dt>
+                  <dd class="form__input">
+                    <input
+                      type="text"
+                      class="form__input-text is-active"
+                      name="お名前"
+                      placeholder="沖縄&emsp;太郎"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl class="form__content-wrap">
+                  <dt class="form__label">メールアドレス<span>必須</span></dt>
+                  <dd class="form__input">
+                    <input
+                      type="email"
+                      class="form__input-text"
+                      name="メールアドレス"
+                      placeholder="aaa000@ggmail.com"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl class="form__content-wrap">
+                  <dt class="form__label">電話番号<span>必須</span></dt>
+                  <dd class="form__input">
+                    <input
+                      type="tel"
+                      class="form__input-text"
+                      name="電話番号"
+                      placeholder="000&#45;0000&#45;0000"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl class="form__content-wrap">
+                  <dt class="form__label">お問合せ項目<span>必須</span></dt>
+                  <dd class="form__input form__input--checkbox">
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="form__input-text"
+                        name="お問い合せ項目"
+                        value="ダイビング講習について"
+                      /><span>ダイビング講習について</span></label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="form__input-text"
+                        name="お問い合せ項目"
+                        value="ファンデイビングについて"
+                      /><span>ファンデイビングについて</span></label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="form__input-text"
+                        name="お問い合せ項目"
+                        value="体験ダイビングについて"
+                      /><span>体験ダイビングについて</span></label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="form__input-text"
+                        name="お問い合せ項目"
+                        value="スペシャルダイビングについて"
+                      /><span>スペシャルダイビングについて</span></label
+                    >
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl class="form__content-wrap">
+                  <dt class="form__label">キャンペーン</dt>
+                  <dd class="form__input">
+                    <select name="キャンペーン" class="form__input-text">
+                      <option selected>キャンペーンの内容を選択</option>
+                      <option>ライセンス取得</option>
+                      <option>体験ダイビング</option>
+                      <option>ナイトダイビング</option>
+                      <option>貸切ファンダイビング</option>
+                    </select>
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl class="form__content-wrap">
+                  <dt class="form__label">お問い合わせ内容<span>必須</span></dt>
+                  <dd class="form__input">
+                    <textarea
+                      class="form__input-text form__input-text--textarea"
+                      name="お問い合わせ内容"
+                    ></textarea>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+            <div class="form__privacy">
+              <label
+                ><input
+                  type="checkbox"
+                  class="form__privacy-text"
+                  name=""
+                  value="個人情報の取り扱いについて同意のうえ送信します。"
+                /><span
+                  >個人情報の取り扱いについて同意のうえ送信します。</span
+                ></label
+              >
+            </div>
+            <div class="form__button">
+              <div class="button">
+                <input
+                  type="submit"
+                  value="send"
+                  class="button__text"
+                /><span></span>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </main>

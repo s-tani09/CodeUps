@@ -224,21 +224,3 @@ $(function () {
     $(this).next().slideToggle(300);
   });
 });
-
-// $(function () {
-//   // 最初のコンテンツは表示
-//   $(".js-faq-lists:first-of-type .js-faq-answer").css("display", "block");
-//   // 最初の矢印は開いた時の状態に
-//   $(".js-faq-question:first-of-type .js-accordion").addClass("is-open");
-//   // タイトルをクリックすると
-//   $(".js-faq-question").on("click", function () {
-//     // クリックしたタイトル以外のopenクラスを外す
-//     $(".js-faq-question").not(this).removeClass("is-open");
-//     // クリックしたタイトル以外のcontentを閉じる
-//     $(".js-faq-answer").not(this).next().slideUp(300);
-//     // クリックしたタイトルにopenクラスを付与
-//     $(this).toggleClass("is-open");
-//     // クリックしたタイトルのcontentを開閉
-//     $(this).next().slideToggle(300);
-//   });
-// });

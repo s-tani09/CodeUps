@@ -6,3 +6,9 @@
     margin-top: rem(160);
   }
 }
+.sub-footer-body {
+  margin-top: rem(145);
+  @include mq("md") {
+    margin-top: rem(118);
+  }
+}

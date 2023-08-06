@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.page-site-map__inner {
+  position: relative;
+}
+
+.page-site-map__inner::before {
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-15);
+  left: rem(15);
+  z-index: -1;
+  background-image: url(../images/common/sub-fish.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  @include mq("md") {
+    display: none;
+  }
+}
