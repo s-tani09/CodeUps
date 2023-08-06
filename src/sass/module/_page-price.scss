@@ -1,10 +1,15 @@
 @use "global" as *;
 
-.post-blog__inner {
+.page-price {
+  position: relative;
+  z-index: -100;
+}
+
+.page-price__inner {
   position: relative;
 }
 
-.post-blog__inner::before {
+.page-price__inner::before {
   content: "";
   position: absolute;
   width: rem(120);
@@ -25,34 +30,9 @@
   }
 }
 
-.post-blog__contents {
-  position: relative;
-  padding: 0 rem(5);
+.page-price__contents {
+  margin-top: rem(24);
   @include mq("md") {
-    display: flex;
-    gap: rem(80);
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.post-blog__contents.post-blog__contents--inner {
-  padding: 0;
-}
-
-.post-blog__main-content {
-}
-
-.post-blog__cards {
-  @include mq("md") {
-    padding: 0;
-    margin-top: initial;
-  }
-}
-
-.post-blog__side {
-  margin-top: rem(80);
-  @include mq("md") {
-    margin-top: 0;
+    margin-top: rem(74);
   }
 }

@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.page-contact__text {
+  font-size: rem(14);
+  letter-spacing: 0.05em;
+  line-height: calc(23 / 14);
+  font-weight: regular;
+  text-align: center;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(32 / 16);
+  }
+}
+
+.page-contact__content {
+  margin-top: rem(30);
+  padding: rem(30);
+  background-color: $gray1;
+  @include mq("md") {
+    margin-top: rem(40);
+    padding: rem(90);
+  }
+}

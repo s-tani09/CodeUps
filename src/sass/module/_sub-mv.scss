@@ -68,3 +68,7 @@
 .sub-mv__title::first-letter {
   text-transform: capitalize;
 }
+
+.sub-mv__title.sub-mv__title-uppercase {
+  text-transform: uppercase;
+}

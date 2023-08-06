@@ -61,9 +61,10 @@
 }
 
 .wp-pagenavi .previouspostslink {
-  margin-right: rem(30);
+  // margin-right: rem(30);
   margin-left: 0;
   position: relative;
+  margin-right: clamp(rem(30), 2.291vw, rem(40));
 }
 
 .wp-pagenavi .previouspostslink::after {
@@ -79,9 +80,10 @@
 }
 
 .wp-pagenavi .nextpostslink {
-  margin-left: rem(30);
+  // margin-left: rem(30);
   margin-right: 0;
   position: relative;
+  margin-left: clamp(rem(30), 2.291vw, rem(40));
 }
 
 .wp-pagenavi .nextpostslink::after {

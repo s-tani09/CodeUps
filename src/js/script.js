@@ -131,23 +131,6 @@ $(function () {
   });
 });
 
-// let scrollPosition;
-// $(".js-modal img").click(function () {
-//   $(".js-modal-window").html($(this).prop("outerHTML"));
-//   $(".js-modal-window").fadeIn(100);
-//   $(".header").fadeOut();
-//   $(".js-page-top").fadeOut();
-//   scrollPosition = $(window).scrollTop();
-//   $("body").addClass("fixed").css({ top: -scrollPosition });
-// });
-// $(".js-modal-window, .js-modal-window img").click(function () {
-//   $(".js-modal-window").fadeOut(100);
-//   $(".header").fadeIn();
-//   $(".js-page-top").fadeIn();
-//   $("body").removeClass("fixed").css({ top: 0 });
-//   window.scrollTo(0, scrollPosition);
-// });
-
 // モーダル表示;
 let scrollPosition;
 $(".js-modal").click(function () {
@@ -207,16 +190,7 @@ topBtn.click(function () {
   return false;
 });
 
-// アコーディオン(ブログ)
-// $(".side-archive__list:first-of-type .side-archive__month").css(
-//   "display",
-//   "block"
-// );
-// $(".side-archive__list:first-of-type .js-side-archive__year").addClass("open");
-// $(".side-archive__year").on("click", function () {
-//   $(this).next().slideToggle(300);
-//   $(this).toggleClass("open", 300);
-// });
+// アコーディオン - blog-archive
 $(document).ready(function () {
   // 初期状態で最初の年の月リストを表示し、▶︎を▼に変更
   $(".side-archive__list:first-of-type .side-archive__month").css(
@@ -240,3 +214,31 @@ $(document).ready(function () {
     $(this).toggleClass("open", 300);
   });
 });
+
+// アコーディオン - FAQ;
+$(function () {
+  $(".js-faq-lists:first-of-type .js-faq-answer").css("display", "block");
+  $(".js-faq-question:first-of-type .js-accordion").addClass("is-open");
+  $(".js-faq-question").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
+});
+
+// $(function () {
+//   // 最初のコンテンツは表示
+//   $(".js-faq-lists:first-of-type .js-faq-answer").css("display", "block");
+//   // 最初の矢印は開いた時の状態に
+//   $(".js-faq-question:first-of-type .js-accordion").addClass("is-open");
+//   // タイトルをクリックすると
+//   $(".js-faq-question").on("click", function () {
+//     // クリックしたタイトル以外のopenクラスを外す
+//     $(".js-faq-question").not(this).removeClass("is-open");
+//     // クリックしたタイトル以外のcontentを閉じる
+//     $(".js-faq-answer").not(this).next().slideUp(300);
+//     // クリックしたタイトルにopenクラスを付与
+//     $(this).toggleClass("is-open");
+//     // クリックしたタイトルのcontentを開閉
+//     $(this).next().slideToggle(300);
+//   });
+// });

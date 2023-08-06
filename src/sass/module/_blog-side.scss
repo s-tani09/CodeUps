@@ -6,6 +6,7 @@
   padding: 0 rem(26);
   @include mq("md") {
     max-width: rem(294);
+    padding: 0;
   }
 }
 

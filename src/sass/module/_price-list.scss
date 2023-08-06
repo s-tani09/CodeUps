@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.price-list {
+  max-width: rem(520);
+  width: 100%;
+  margin: auto;
+  @include mq("md") {
+    max-width: initial;
+    margin: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.price-list__heading {
+  padding: rem(8) 0;
+  background-color: $green1;
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  @include mq("md") {
+    flex-direction: column;
+    width: rem(200);
+    height: 100%;
+  }
+}
+
+.price-list__title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  color: $white;
+  margin-left: rem(8);
+  @include mq("md") {
+    margin-left: 0;
+  }
+}
+
+.price-list__image {
+  display: inline-block;
+  width: rem(24);
+  height: rem(24);
+  @include mq("md") {
+    width: rem(64);
+    height: rem(64);
+    margin-top: rem(8);
+  }
+}
+
+.price-list__image img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price-list__item {
+  display: flex;
+  align-items: center;
+  border-bottom: rem(1) solid $green1;
+  border-left: rem(1) solid $green1;
+  border-right: rem(1) solid $green1;
+  position: relative;
+  @include mq("md") {
+  }
+}
+
+.price-list__item:first-child {
+  @include mq("md") {
+    border-top: rem(1) solid $green1;
+  }
+}
+
+.price-list__course {
+  width: 69.5%;
+  text-align: center;
+  padding: rem(7) rem(16);
+  border-right: rem(1) solid $green1;
+  font-family: "Noto Sans JP", sans-serif;
+  @include mq("md") {
+    width: rem(340);
+    text-align: left;
+    padding: rem(18) rem(16);
+  }
+}
+
+.price-list__course--padding {
+  padding: rem(19) rem(16);
+  @include mq("md") {
+    padding: rem(18) rem(16);
+  }
+}
+
+.price-list__price {
+  font-family: "Noto Sans JP", sans-serif;
+  width: 30.5%;
+  padding: rem(19) rem(16);
+  text-align: right;
+  @include mq("md") {
+    width: rem(160);
+    padding: rem(18) rem(16);
+  }
+}
