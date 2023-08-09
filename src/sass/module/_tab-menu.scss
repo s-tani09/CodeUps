@@ -28,6 +28,11 @@
   }
 }
 
+.tab-menu__list.current {
+  background-color: $green1;
+  color: $white;
+}
+
 .tab-menu__list:hover {
   color: $white;
   background-color: $green1;
@@ -38,6 +43,12 @@
   @include mq("md") {
     position: relative;
     padding-left: rem(70);
+  }
+}
+
+.tab-whale-icon.current span::before {
+  @include mq("md") {
+    background-image: url(../images/common/tab-whale-hover.png);
   }
 }
 
@@ -92,6 +103,12 @@
   }
 }
 
+.tab-shark-icon.current span::before {
+  @include mq("md") {
+    background-image: url(../images/common/tab-shark-hover.png);
+  }
+}
+
 .tab-fish-icon span {
   @include mq("md") {
     position: relative;
@@ -115,6 +132,12 @@
 }
 
 .tab-fish-icon:hover span::before {
+  @include mq("md") {
+    background-image: url(../images/common/tab-fish-hover.png);
+  }
+}
+
+.tab-fish-icon.current span::before {
   @include mq("md") {
     background-image: url(../images/common/tab-fish-hover.png);
   }
