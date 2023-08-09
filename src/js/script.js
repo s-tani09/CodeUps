@@ -224,3 +224,33 @@ $(function () {
     $(this).next().slideToggle(300);
   });
 });
+
+$(document).ready(function () {
+  $(".button").click(function (event) {
+    var formValid = true;
+
+    // 全ての必須フィールドをループでチェック
+    $(".form__input-text[required]").each(function () {
+      if ($(this).val() === "") {
+        formValid = false;
+        $(this).addClass("error");
+      } else {
+        $(this).removeClass("error");
+      }
+    });
+
+    // プライバシーチェックボックスもチェック
+    if (!$(".form__privacy-text").is(":checked")) {
+      formValid = false;
+      $(".form__privacy-text").addClass("error");
+    } else {
+      $(".form__privacy-text").removeClass("error");
+    }
+
+    // フォームが無効な場合は送信をキャンセル
+    if (!formValid) {
+      event.preventDefault();
+      $(".page-contact__error").show();
+    }
+  });
+});

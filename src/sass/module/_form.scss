@@ -1,35 +1,14 @@
 @use "global" as *;
 
-.form__error {
-  display: none;
-  margin: 0 auto;
-}
-
-.form__error.is-active {
-  display: block;
-}
-
-.form__error-text {
-  font-size: rem(14);
-  line-height: calc(20 / 14);
-  color: #c94800;
-  padding-left: 1em;
-  text-indent: -1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form__list.is-active {
+.form__items.error {
   margin-top: rem(40);
 }
 
 .form__item {
-  padding-bottom: rem(24);
-  border-bottom: rem(1) dotted $green1;
-
+  padding-bottom: rem(22);
+  border-bottom: rem(2) dotted $green1;
   @include mq("md") {
-    padding-bottom: rem(37);
+    padding-bottom: rem(40);
   }
 }
 
@@ -40,7 +19,7 @@
   }
 }
 
-.form__content-wrap {
+.form__content {
   @include mq("md") {
     display: flex;
   }
@@ -59,12 +38,12 @@
   padding: rem(2) 0;
   text-align: center;
   font-size: rem(12);
-  background-color: #c94800;
+  background-color: $red;
   color: $white;
 }
-.form__input {
-  margin-top: rem(16);
 
+.form__input {
+  margin-top: rem(14);
   @include mq("md") {
     margin-top: 0;
     width: 68.5714%;
@@ -74,32 +53,46 @@
 .form__input.form__input--checkbox {
   display: flex;
   flex-direction: column;
-  row-gap: rem(15);
+  row-gap: rem(14);
 }
 
-select {
-  background-image: url(../images/common/select-arrow.png);
-  background-position: right rem(8) top rem(9);
-  background-repeat: no-repeat;
-  background-size: rem(12) rem(10);
+.form__item--select {
+  position: relative;
+}
+
+.form__item--select::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(9) rem(6) 0 rem(6);
+  border-color: $green1 transparent transparent transparent;
+  right: rem(10);
+  top: 54%;
+  @include mq("md") {
+    top: 22%;
+  }
 }
 
 .form__input-text {
   width: 100%;
   padding: rem(8) rem(16);
   border: rem(1) solid $green1;
+  font-size: rem(12);
 }
 
-.form__input-text.is-active {
-  border: rem(1) solid #c94800;
-  background-color: rgba($color: #c94800, $alpha: 0.2);
+.form__input-text.error {
+  border: rem(1) solid $red;
+  background-color: rgba($color: $red, $alpha: 0.2);
 }
 
 .form__input-text::placeholder {
   color: $gray2;
 }
 
-.form__input-text.is-active::placeholder {
+.form__input-text.error::placeholder {
   color: $white;
 }
 
@@ -119,21 +112,25 @@ select {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  border: 1px solid $green1;
+  border: rem(1) solid $green1;
 }
 
 .form__input-text + span::after {
   content: "";
+  display: block;
   position: absolute;
-  width: rem(10.5);
-  height: rem(7.5);
-  left: rem(3);
-  top: 50%;
-  transform: translateY(-50%);
-  background-image: url(../images/common/check-icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-bottom: rem(2.5) solid $red;
+  border-left: rem(2.5) solid $red;
+  opacity: 0;
+  height: rem(4);
+  width: rem(10);
+  top: rem(2);
+  left: rem(6);
+  transform: rotate(-40deg) translateX(-50%);
+  @include mq("md") {
+    width: rem(9);
+    height: rem(5);
+  }
   opacity: 0;
 }
 
@@ -148,11 +145,18 @@ input:checked + span::after {
 
 .form__privacy {
   margin-top: rem(40);
-
   @include mq("md") {
     margin-top: rem(80);
     text-align: center;
   }
+}
+
+.form__privacy-inner {
+  max-width: 85%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .form__privacy-text {
@@ -164,7 +168,6 @@ input:checked + span::after {
   display: inline-block;
   padding-left: rem(30);
   position: relative;
-
   @include mq("md") {
     padding-left: rem(38);
   }
@@ -183,16 +186,20 @@ input:checked + span::after {
 
 .form__privacy-text + span::after {
   content: "";
+  display: block;
   position: absolute;
-  width: rem(17.5);
-  height: rem(12.5);
-  left: rem(5);
-  top: rem(5);
-  background-image: url(../images/common/check-icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-bottom: rem(3) solid $red;
+  border-left: rem(3) solid $red;
   opacity: 0;
+  height: rem(6);
+  width: rem(10);
+  top: 13%;
+  left: rem(12);
+  transform: rotate(-45deg) translate(-50%, -50%);
+  @include mq("md") {
+    top: 20%;
+    left: 3%;
+  }
 }
 
 input:checked + span::after {
@@ -202,20 +209,7 @@ input:checked + span::after {
 .form__button {
   text-align: center;
   margin-top: rem(24);
-
   @include mq("md") {
     margin-top: rem(40);
   }
-}
-
-.contact-body__form {
-  @include mq("md") {
-    max-width: rem(700);
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-.layout-body {
-  margin-top: 150px;
 }

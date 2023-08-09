@@ -105,7 +105,7 @@
               </a>
             </li>
             <li class="pc-nav__item pc-nav__item--uppercase">
-              <a href="#">
+              <a href="page-faq.html">
                 <div class="pc-nav__item-wrapper">
                   <div class="pc-nav__item-en">faq</div>
                   <div class="pc-nav__item-jp">よくある質問</div>
@@ -191,12 +191,14 @@
               </ul>
               <ul class="sp-nav__right-items">
                 <li class="sp-nav__right-item">
-                  <a href="#">プライバシー<br />ポリシー</a>
+                  <a href="page-privacy-policy.html"
+                    >プライバシー<br />ポリシー</a
+                  >
                 </li>
               </ul>
               <ul class="sp-nav__right-items">
                 <li class="sp-nav__right-item">
-                  <a href="#">利用規約</a>
+                  <a href="page-terms-of-service.html">利用規約</a>
                 </li>
               </ul>
               <ul class="sp-nav__right-items">
@@ -219,7 +221,7 @@
             />
             <img
               src="./assets/images/common/contact-sub-sp.jpg"
-              alt="シーサーが"
+              alt="エメラルドグリーンの海の波の様子"
             />
           </picture>
         </div>
@@ -243,141 +245,75 @@
         </div>
       </div>
 
-      <div class="contact-body layout-body">
-        <div class="contact-body__inner inner fish-icon">
-          <form action="" class="contact-body__form form">
-            <div class="form__error is-active">
-              <p class="form__error-text">
-                ※必須項目が入力されていません。<br
+      <div class="page-contact sub-page-contact">
+        <div class="page-contact__inner inner">
+          <form action="confirm.php" method="post" class="page-contact__form form">
+            <div class="page-contact__error">
+              <p class="page-contact__error-text">
+                &#x203B;必須項目が入力されていません。<br
                   class="u-mobile"
                 />入力してください。
               </p>
             </div>
-            <ul class="form__list is-active">
+            <ul class="form__items error">
               <li class="form__item">
-                <dl class="form__content-wrap">
-                  <dt class="form__label">お名前<span>必須</span></dt>
-                  <dd class="form__input">
-                    <input
-                      type="text"
-                      class="form__input-text is-active"
-                      name="お名前"
-                      placeholder="沖縄&emsp;太郎"
-                    />
-                  </dd>
+                <dl class="form__content">
+                  <dt class="form__label"><label for="name">お名前</label><span>必須</span></dt>
+                  <dd class="form__input"><input type="text" name="name" id="name" class="form__input-text" placeholder="沖縄&emsp;太郎" required></dd>
                 </dl>
               </li>
               <li class="form__item">
-                <dl class="form__content-wrap">
-                  <dt class="form__label">メールアドレス<span>必須</span></dt>
-                  <dd class="form__input">
-                    <input
-                      type="email"
-                      class="form__input-text"
-                      name="メールアドレス"
-                      placeholder="aaa000@ggmail.com"
-                    />
-                  </dd>
+                <dl class="form__content">
+                  <dt class="form__label"><label for="email">メールアドレス</label><span>必須</span></dt>
+                  <dd class="form__input"><input type="text" name="email" id="email" class="form__input-text" placeholder="aaa000@ggmail.com" required></dd>
                 </dl>
               </li>
               <li class="form__item">
-                <dl class="form__content-wrap">
-                  <dt class="form__label">電話番号<span>必須</span></dt>
-                  <dd class="form__input">
-                    <input
-                      type="tel"
-                      class="form__input-text"
-                      name="電話番号"
-                      placeholder="000&#45;0000&#45;0000"
-                    />
-                  </dd>
+                <dl class="form__content">
+                  <dt class="form__label"><label for="tel">電話番号</label><span>必須</span></dt>
+                  <dd class="form__input"><input type="tel" name="tel" id="tel" class="form__input-text" placeholder="000&#45;0000&#45;0000" required></dd>
                 </dl>
               </li>
               <li class="form__item">
-                <dl class="form__content-wrap">
-                  <dt class="form__label">お問合せ項目<span>必須</span></dt>
+                <dl class="form__content">
+                  <dt class="form__label">お問い合わせ項目<span>必須</span></dt>
                   <dd class="form__input form__input--checkbox">
-                    <label
-                      ><input
-                        type="checkbox"
-                        class="form__input-text"
-                        name="お問い合せ項目"
-                        value="ダイビング講習について"
-                      /><span>ダイビング講習について</span></label
-                    >
-                    <label
-                      ><input
-                        type="checkbox"
-                        class="form__input-text"
-                        name="お問い合せ項目"
-                        value="ファンデイビングについて"
-                      /><span>ファンデイビングについて</span></label
-                    >
-                    <label
-                      ><input
-                        type="checkbox"
-                        class="form__input-text"
-                        name="お問い合せ項目"
-                        value="体験ダイビングについて"
-                      /><span>体験ダイビングについて</span></label
-                    >
-                    <label
-                      ><input
-                        type="checkbox"
-                        class="form__input-text"
-                        name="お問い合せ項目"
-                        value="スペシャルダイビングについて"
-                      /><span>スペシャルダイビングについて</span></label
-                    >
+                    <label><input type="checkbox" class="form__input-text"><span>ダイビング講習について</span></label>
+                    <label><input type="checkbox" class="form__input-text"><span>ファンデイビングについて</span></label>
+                    <label><input type="checkbox" class="form__input-text"><span>体験ダイビングについて</span></label>
+                    <label><input type="checkbox" class="form__input-text"><span>スペシャルダイビングについて</span></label>
                   </dd>
                 </dl>
               </li>
-              <li class="form__item">
-                <dl class="form__content-wrap">
+              <li class="form__item form__item--select">
+                <dl class="form__content">
                   <dt class="form__label">キャンペーン</dt>
                   <dd class="form__input">
-                    <select name="キャンペーン" class="form__input-text">
-                      <option selected>キャンペーンの内容を選択</option>
-                      <option>ライセンス取得</option>
-                      <option>体験ダイビング</option>
-                      <option>ナイトダイビング</option>
-                      <option>貸切ファンダイビング</option>
+                    <select name="select" class="form__input-text">
+                      <option value="">キャンペーン内容を選択</option>
+                      <option value="セレクト1">ライセンス講習</option>
+                      <option value="セレクト2">ファンダイビング</option>
+                      <option value="セレクト3">体験ダイビング</option>
                     </select>
                   </dd>
                 </dl>
               </li>
               <li class="form__item">
-                <dl class="form__content-wrap">
-                  <dt class="form__label">お問い合わせ内容<span>必須</span></dt>
-                  <dd class="form__input">
-                    <textarea
-                      class="form__input-text form__input-text--textarea"
-                      name="お問い合わせ内容"
-                    ></textarea>
-                  </dd>
+                <dl class="form__content">
+                  <dt class="form__label"><label for="textarea">お問い合わせ内容<span>必須</span></dt>
+                  <dd class="form__input"><textarea class="form__input-text form__input-text--textarea" name="textarea" id="textarea" required></textarea></dd>
                 </dl>
               </li>
             </ul>
             <div class="form__privacy">
-              <label
-                ><input
-                  type="checkbox"
-                  class="form__privacy-text"
-                  name=""
-                  value="個人情報の取り扱いについて同意のうえ送信します。"
-                /><span
-                  >個人情報の取り扱いについて同意のうえ送信します。</span
-                ></label
-              >
+              <div class="form__privacy-inner">
+                <label><input type="checkbox" class="form__privacy-text"><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>
+              </div>
             </div>
             <div class="form__button">
-              <div class="button">
-                <input
-                  type="submit"
-                  value="send"
-                  class="button__text"
-                /><span></span>
-              </div>
+              <a href="" class="button"
+                ><span>send</span></a
+              >
             </div>
           </form>
         </div>
@@ -457,7 +393,7 @@
           <div class="footer-nav__right">
             <ul class="footer-nav__right-items">
               <li class="footer-nav__right-item">
-                <a href="#">お客様の声</a>
+                <a href="archive-voice.html">お客様の声</a>
               </li>
             </ul>
             <ul class="footer-nav__right-items">
@@ -476,22 +412,24 @@
             </ul>
             <ul class="footer-nav__right-items">
               <li class="footer-nav__right-item">
-                <a href="#">よくある質問</a>
+                <a href="page-faq.html">よくある質問</a>
               </li>
             </ul>
             <ul class="footer-nav__right-items">
               <li class="footer-nav__right-item">
-                <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
+                <a href="page-privacy-policy.html"
+                  >プライバシー<br class="u-mobile" />ポリシー</a
+                >
               </li>
             </ul>
             <ul class="footer-nav__right-items">
               <li class="footer-nav__right-item">
-                <a href="#">利用規約</a>
+                <a href="page-terms-of-service.html">利用規約</a>
               </li>
             </ul>
             <ul class="footer-nav__right-items">
               <li class="footer-nav__right-item">
-                <a href="#">お問い合わせ</a>
+                <a href="page-contact.html">お問い合わせ</a>
               </li>
             </ul>
           </div>
@@ -503,7 +441,6 @@
         </div>
       </div>
     </footer>
-
     <div class="page-top-button js-page-top">
       <a href="#">
         <img src="./assets/images/common/arrow-right.png" alt="上向き矢印" />
