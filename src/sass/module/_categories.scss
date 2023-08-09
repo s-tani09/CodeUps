@@ -9,9 +9,6 @@
 .categories__items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  // flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: center;
   gap: rem(16) rem(20);
   @include mq("md") {
     display: flex;

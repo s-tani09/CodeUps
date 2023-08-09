@@ -81,6 +81,7 @@
   padding: rem(8) rem(16);
   border: rem(1) solid $green1;
   font-size: rem(12);
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .form__input-text.error {
@@ -90,10 +91,12 @@
 
 .form__input-text::placeholder {
   color: $gray2;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .form__input-text.error::placeholder {
   color: $white;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .form__input-text + span {

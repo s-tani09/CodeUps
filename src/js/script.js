@@ -225,8 +225,38 @@ $(function () {
   });
 });
 
+// $(document).ready(function () {
+//   $(".button").click(function (event) {
+//     var formValid = true;
+
+//     // 全ての必須フィールドをループでチェック
+//     $(".form__input-text[required]").each(function () {
+//       if ($(this).val() === "") {
+//         formValid = false;
+//         $(this).addClass("error");
+//       } else {
+//         $(this).removeClass("error");
+//       }
+//     });
+
+//     // プライバシーチェックボックスもチェック
+//     if (!$(".form__privacy-text").is(":checked")) {
+//       formValid = false;
+//       $(".form__privacy-text").addClass("error");
+//     } else {
+//       $(".form__privacy-text").removeClass("error");
+//     }
+
+//     // フォームが無効な場合は送信をキャンセル
+//     if (!formValid) {
+//       event.preventDefault();
+//       $(".page-contact__error").show();
+//     }
+//   });
+// });
+
 $(document).ready(function () {
-  $(".button").click(function (event) {
+  $(".js-error-button").click(function (event) {
     var formValid = true;
 
     // 全ての必須フィールドをループでチェック
@@ -251,6 +281,12 @@ $(document).ready(function () {
     if (!formValid) {
       event.preventDefault();
       $(".page-contact__error").show();
+
+      // エラー時にパンくずリストを表示
+      $(".breadcrumbs__item.error").show();
+    } else {
+      // フォームが有効な場合はサンクスページにリダイレクト
+      window.location.href = "page-contact-thanks.html"; // サンクスページのURLに置き換えてください
     }
   });
 });
