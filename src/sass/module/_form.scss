@@ -1,14 +1,23 @@
 @use "global" as *;
 
+.form__inner {
+  max-width: rem(520);
+  width: 100%;
+  margin: auto;
+  @include mq("md") {
+    max-width: rem(700);
+  }
+}
+
 .form__items.error {
   margin-top: rem(40);
 }
 
 .form__item {
-  padding-bottom: rem(22);
+  padding-bottom: rem(24);
   border-bottom: rem(2) dotted $green1;
   @include mq("md") {
-    padding-bottom: rem(40);
+    padding-bottom: rem(38);
   }
 }
 
@@ -69,16 +78,18 @@
   border-style: solid;
   border-width: rem(9) rem(6) 0 rem(6);
   border-color: $green1 transparent transparent transparent;
-  right: rem(10);
-  top: 54%;
+  right: rem(8);
+  top: 49%;
+  cursor: pointer;
+  z-index: 1;
   @include mq("md") {
-    top: 22%;
+    top: 20%;
   }
 }
 
 .form__input-text {
   width: 100%;
-  padding: rem(8) rem(16);
+  padding: rem(10) rem(8);
   border: rem(1) solid $green1;
   font-size: rem(12);
   font-family: "Noto Sans JP", sans-serif;
@@ -133,8 +144,8 @@
   @include mq("md") {
     width: rem(9);
     height: rem(5);
+    opacity: 0;
   }
-  opacity: 0;
 }
 
 input:checked + span::after {
@@ -147,7 +158,7 @@ input:checked + span::after {
 }
 
 .form__privacy {
-  margin-top: rem(40);
+  margin-top: rem(29);
   @include mq("md") {
     margin-top: rem(80);
     text-align: center;
@@ -165,6 +176,7 @@ input:checked + span::after {
 .form__privacy-text {
   font-size: rem(14);
   line-height: calc(22 / 14);
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .form__privacy-text + span {
@@ -185,6 +197,7 @@ input:checked + span::after {
   left: 0;
   border: rem(1) solid $green1;
   background-color: $white;
+  cursor: pointer;
 }
 
 .form__privacy-text + span::after {
@@ -199,6 +212,7 @@ input:checked + span::after {
   top: 13%;
   left: rem(12);
   transform: rotate(-45deg) translate(-50%, -50%);
+  cursor: pointer;
   @include mq("md") {
     top: 20%;
     left: 3%;

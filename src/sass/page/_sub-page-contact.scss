@@ -3,6 +3,6 @@
 .sub-page-contact {
   margin-top: rem(52);
   @include mq("md") {
-    margin-top: 150px;
+    margin-top: rem(150);
   }
 }

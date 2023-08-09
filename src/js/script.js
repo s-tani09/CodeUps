@@ -290,3 +290,24 @@ $(document).ready(function () {
     }
   });
 });
+
+$(document).ready(function () {
+  // ▼アイコンがクリックされたときの処理
+  $(".form__input-text + span").click(function () {
+    // クリックされたアイコンの親要素を取得
+    var selectContainer = $(this).parent();
+
+    // 親要素にクラスを追加してセレクトボックスを表示
+    selectContainer.toggleClass("active");
+
+    // 他の場所をクリックしたらセレクトボックスを非表示にする処理
+    $(document).on("click", function (event) {
+      if (
+        !selectContainer.is(event.target) &&
+        selectContainer.has(event.target).length === 0
+      ) {
+        selectContainer.removeClass("active");
+      }
+    });
+  });
+});

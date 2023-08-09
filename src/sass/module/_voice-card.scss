@@ -67,7 +67,7 @@
 
 .voice-card__image {
   margin-left: rem(13);
-  width: calc(50.2428% - 6px);
+  width: calc(50.2428% - rem(6));
   padding-top: rem(12);
   @include mq("md") {
     padding-top: 0;
