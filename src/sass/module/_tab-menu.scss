@@ -34,21 +34,16 @@
 }
 
 .tab-menu__list:hover {
-  color: $white;
-  background-color: $green1;
-  opacity: 1;
+  cursor: pointer;
+  // color: $white;
+  // background-color: $green1;
+  // opacity: 1;
 }
 
 .tab-whale-icon span {
   @include mq("md") {
     position: relative;
     padding-left: rem(70);
-  }
-}
-
-.tab-whale-icon.current span::before {
-  @include mq("md") {
-    background-image: url(../images/common/tab-whale-hover.png);
   }
 }
 
@@ -68,7 +63,13 @@
   }
 }
 
-.tab-whale-icon:hover span::before {
+// .tab-whale-icon:hover span::before {
+//   @include mq("md") {
+//     background-image: url(../images/common/tab-whale-hover.png);
+//   }
+// }
+
+.tab-whale-icon.current span::before {
   @include mq("md") {
     background-image: url(../images/common/tab-whale-hover.png);
   }
@@ -97,11 +98,11 @@
   }
 }
 
-.tab-shark-icon:hover span::before {
-  @include mq("md") {
-    background-image: url(../images/common/tab-shark-hover.png);
-  }
-}
+// .tab-shark-icon:hover span::before {
+//   @include mq("md") {
+//     background-image: url(../images/common/tab-shark-hover.png);
+//   }
+// }
 
 .tab-shark-icon.current span::before {
   @include mq("md") {
@@ -131,11 +132,11 @@
   }
 }
 
-.tab-fish-icon:hover span::before {
-  @include mq("md") {
-    background-image: url(../images/common/tab-fish-hover.png);
-  }
-}
+// .tab-fish-icon:hover span::before {
+//   @include mq("md") {
+//     background-image: url(../images/common/tab-fish-hover.png);
+//   }
+// }
 
 .tab-fish-icon.current span::before {
   @include mq("md") {
