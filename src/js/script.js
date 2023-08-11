@@ -1,23 +1,46 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
-  $(document).ready(function () {
-    setTimeout(function () {
-      const loadingElement = $(".js-loading");
-      loadingElement.addClass("loading__fadeOut");
 
+  $(function () {
+    // sessionStorageの値を判定
+    let isFirstAccess = !sessionStorage.getItem("has_visited");
+
+    if (isFirstAccess) {
+      // 1回目アクセスの処理
+      $(".js-loading").css("display", "block");
+      $(".js-loading")
+        .delay(3000)
+        .fadeOut(2000, function () {
+          const swiper1 = new Swiper(".js-mv__slider", {
+            loop: true,
+            speed: 1500,
+            autoplay: {
+              delay: 2000,
+            },
+          });
+          $(".js-loading-image").addClass("is-hidden");
+          $(".header").addClass("color");
+        });
+      $("body").css("display", "block");
+
+      // 初回アクセスが完了したことをセッションストレージに記録
+      sessionStorage.setItem("has_visited", "true");
+    } else {
+      // 2回目アクセスの処理
+      $(".js-loading").hide();
+      $(".js-loading-image, .js-loading").addClass("is-hidden");
+      $("body").css("display", "block");
       setTimeout(function () {
         const swiper1 = new Swiper(".js-mv__slider", {
           loop: true,
-          speed: 2000,
+          speed: 1500,
           autoplay: {
-            delay: 2500,
+            delay: 2000,
           },
         });
-        $(".loading__image").addClass("is-hidden");
         $(".header").addClass("color");
-        loadingElement.hide();
-      }, 3700);
-    }, 3700);
+      }, 3000);
+    }
   });
 });
 

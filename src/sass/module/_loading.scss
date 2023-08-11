@@ -25,9 +25,6 @@
   flex-direction: column;
   position: absolute;
   top: 43.8%;
-  // width: 100%;
-  // margin-left: auto;
-  // margin-right: auto;
   left: 50%;
   transform: translate(-48%, -48%);
   color: $green1;
@@ -80,7 +77,7 @@
   opacity: 0;
 }
 
-.loading__fadeUpLeft {
+.loading__image-left--fadeUp {
   animation-name: fadeUpAnimeLeft; /*アニメーションの定義名*/
   animation-duration: 4s; /*アニメーション変化時間 ※デフォルト*/
   animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
@@ -103,7 +100,7 @@
   opacity: 0;
 }
 
-.loading__fadeUpRight {
+.loading__image-right--fadeUp {
   animation-name: fadeUpAnimeRight;
   animation-duration: 3.5s;
   animation-fill-mode: forwards;
@@ -119,11 +116,12 @@
   }
 }
 
-.loading__delay {
+.delay {
   animation-delay: 0.5s;
 }
 
-.loading__fadeOut {
+.loading__title-main.is-close,
+.loading__title-sub.is-close {
   animation-name: fadeOutAnime;
   animation-duration: 3s;
   animation-fill-mode: forwards;

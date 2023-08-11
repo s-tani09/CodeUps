@@ -61,7 +61,7 @@
 }
 
 .contact__box {
-  margin-top: rem(19);
+  margin-top: rem(15);
   text-align: center;
   @include mq("md") {
     margin-top: rem(24);
@@ -123,7 +123,7 @@
 }
 
 .contact__button {
-  margin-top: rem(35);
+  margin-top: rem(30);
   @include mq("md") {
     margin-top: rem(16);
   }

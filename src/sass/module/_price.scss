@@ -2,7 +2,7 @@
 
 .price {
   background-color: $gray2;
-  padding: rem(85) 0 rem(86);
+  padding: rem(80) 0 rem(86);
   @include mq("md") {
     padding: rem(100) 0 rem(106);
   }
@@ -28,7 +28,7 @@
 }
 
 .price__content {
-  margin-top: rem(35);
+  margin-top: rem(26);
   @include mq("md") {
     margin-top: rem(48);
     display: flex;
@@ -62,7 +62,7 @@
 }
 
 .price__button {
-  margin-top: rem(46);
+  margin-top: rem(43);
   text-align: center;
   @include mq(md) {
     margin-top: rem(80);

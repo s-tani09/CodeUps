@@ -5,7 +5,7 @@
 }
 
 .campaign__slider {
-  margin-top: rem(32);
+  margin-top: rem(27);
   margin-right: calc(50% - 50vw);
   padding-bottom: rem(10);
   @include mq("md") {
@@ -14,10 +14,10 @@
 }
 
 .campaign__button {
-  margin-top: rem(32);
+  margin-top: rem(29);
   text-align: center;
   @include mq("md") {
-    margin-top: rem(67);
+    margin-top: rem(70);
   }
 }
 
