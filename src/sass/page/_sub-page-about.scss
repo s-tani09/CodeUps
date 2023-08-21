@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.sub-about {
-  margin-top: rem(52);
+.sub-page-about {
+  margin-top: rem(48);
   @include mq("md") {
     margin-top: rem(150);
   }

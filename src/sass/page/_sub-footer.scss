@@ -1,14 +1,21 @@
 @use "global" as *;
 
 .sub-footer {
-  margin-top: rem(108);
+  margin-top: rem(102);
   @include mq("md") {
-    margin-top: rem(150);
+    margin-top: rem(160);
   }
 }
-.sub-footer-body {
+.sub-footer.sub-footer--margin {
   margin-top: rem(145);
   @include mq("md") {
-    margin-top: rem(118);
+    margin-top: rem(160);
+  }
+}
+
+.sub-footer.sub-footer--thanks {
+  margin-top: rem(144);
+  @include mq("md") {
+    margin-top: rem(120);
   }
 }

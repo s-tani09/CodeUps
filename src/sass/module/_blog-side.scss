@@ -3,7 +3,7 @@
 .blog-side {
   width: 100%;
   max-width: rem(600);
-  padding: 0 rem(26);
+  padding: 0 rem(25);
   @include mq("md") {
     max-width: rem(294);
     padding: 0;
@@ -16,7 +16,7 @@
 
 .blog-side__content.blog-side__content--side {
   @include mq("md") {
-    margin-top: rem(89);
+    margin-top: rem(80);
   }
 }
 

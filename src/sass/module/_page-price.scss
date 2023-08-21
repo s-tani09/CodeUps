@@ -2,7 +2,6 @@
 
 .page-price {
   position: relative;
-  z-index: -100;
 }
 
 .page-price__inner {
@@ -30,9 +29,13 @@
   }
 }
 
-.page-price__contents {
-  margin-top: rem(24);
+.page-price__inner.inner {
+  max-width: rem(520);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   @include mq("md") {
-    margin-top: rem(74);
+    max-width: rem(750);
+    width: 100%;
   }
 }

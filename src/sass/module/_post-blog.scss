@@ -27,7 +27,6 @@
 
 .post-blog__contents {
   position: relative;
-  padding: 0 rem(5);
   @include mq("md") {
     display: flex;
     gap: rem(80);
@@ -36,14 +35,7 @@
   }
 }
 
-.post-blog__contents.post-blog__contents--inner {
-  padding: 0;
-}
-
-.post-blog__main-content {
-}
-
-.post-blog__cards {
+.post-blog__items {
   @include mq("md") {
     padding: 0;
     margin-top: initial;

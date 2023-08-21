@@ -1,15 +1,9 @@
 @use "global" as *;
 
 .price-list {
-  max-width: rem(520);
-  width: 100%;
-  margin: auto;
   @include mq("md") {
-    max-width: initial;
-    margin: initial;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 }
 
@@ -23,8 +17,9 @@
   justify-content: center;
   @include mq("md") {
     flex-direction: column;
-    width: rem(200);
+    width: 29%;
     height: 100%;
+    padding: 0;
   }
 }
 
@@ -58,6 +53,12 @@
   object-fit: cover;
 }
 
+.price-list__items {
+  @include mq("md") {
+    width: 71%;
+  }
+}
+
 .price-list__item {
   display: flex;
   align-items: center;
@@ -78,30 +79,30 @@
 .price-list__course {
   width: 69.5%;
   text-align: center;
-  padding: rem(7) rem(16);
+  padding: rem(6) rem(16) rem(5);
   border-right: rem(1) solid $green1;
   font-family: "Noto Sans JP", sans-serif;
   @include mq("md") {
-    width: rem(340);
+    width: 68%;
     text-align: left;
-    padding: rem(18) rem(16);
+    padding: rem(18) rem(16) rem(17);
   }
 }
 
 .price-list__course--padding {
-  padding: rem(19) rem(16);
+  padding: rem(18) rem(16) rem(17);
   @include mq("md") {
-    padding: rem(18) rem(16);
+    padding: rem(17) rem(16) rem(17);
   }
 }
 
 .price-list__price {
   font-family: "Noto Sans JP", sans-serif;
   width: 30.5%;
-  padding: rem(19) rem(16);
+  padding: rem(18) rem(16) rem(17);
   text-align: right;
   @include mq("md") {
-    width: rem(160);
-    padding: rem(18) rem(16);
+    width: 32%;
+    padding: rem(18) rem(16) rem(17);
   }
 }

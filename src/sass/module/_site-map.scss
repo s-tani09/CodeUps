@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .site-map {
-  width: 100%;
   display: flex;
 }
 
@@ -19,15 +18,16 @@
     flex-direction: column;
     height: rem(240);
     flex-wrap: wrap;
-    row-gap: rem(6);
-    column-gap: rem(45);
+    // row-gap: rem(6);
+    // column-gap: rem(45);
+    gap: rem(6) rem(100);
   }
 }
 
 .site-map__right {
   margin-left: rem(10);
   @include mq("md") {
-    margin-left: rem(28);
+    margin-left: rem(127);
   }
 }
 

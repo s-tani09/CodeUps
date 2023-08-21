@@ -1,10 +1,36 @@
 @use "global" as *;
 
-.archive-campaign__categories {
-  margin-top: rem(52);
+.archive-campaign__inner {
+  position: relative;
+}
+
+.archive-campaign__inner::before {
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-24);
+  left: rem(15);
+  z-index: -1;
+  background-image: url(../images/common/sub-fish.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   @include mq("md") {
-    margin-top: rem(150);
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: rem(15);
+    left: calc(50% - min(49vw, rem(620.8)));
   }
+}
+
+.archive-campaign__categories {
+  margin-top: rem(40);
+}
+
+.archive-campaign__items {
+  margin-top: rem(40);
 }
 
 .archive-campaign__cards {

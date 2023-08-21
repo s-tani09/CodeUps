@@ -3,11 +3,7 @@
 .faq-lists {
   display: grid;
   gap: rem(41);
-  max-width: rem(520);
-  width: 100%;
-  margin: auto;
   @include mq("md") {
     gap: rem(40);
-    max-width: rem(700);
   }
 }

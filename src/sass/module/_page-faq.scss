@@ -25,14 +25,16 @@
   }
 }
 
-.page-faq__contents {
-  margin-top: rem(52);
+.page-faq__inner.inner {
+  max-width: rem(530);
+  width: 100%;
+  margin: auto;
   @include mq("md") {
-    margin-top: rem(150);
+    max-width: rem(750);
   }
 }
 
-.page-faq__content {
+.page-faq__content + .page-faq__content {
   margin-top: rem(42.5);
   @include mq("md") {
     margin-top: rem(40);

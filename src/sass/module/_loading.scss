@@ -79,7 +79,7 @@
 
 .loading__image-left--fadeUp {
   animation-name: fadeUpAnimeLeft; /*アニメーションの定義名*/
-  animation-duration: 4s; /*アニメーション変化時間 ※デフォルト*/
+  animation-duration: 2s; /*アニメーション変化時間 ※デフォルト*/
   animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
   opacity: 0;
 }
@@ -102,7 +102,7 @@
 
 .loading__image-right--fadeUp {
   animation-name: fadeUpAnimeRight;
-  animation-duration: 3.5s;
+  animation-duration: 2.5s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -117,13 +117,12 @@
 }
 
 .delay {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 
-.loading__title-main.is-close,
-.loading__title-sub.is-close {
+.is-close {
   animation-name: fadeOutAnime;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
   animation-fill-mode: forwards;
 }
 @keyframes fadeOutAnime {

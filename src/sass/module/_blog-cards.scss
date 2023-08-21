@@ -7,7 +7,7 @@
     gap: rem(40);
   }
 }
-.blog-cards.blog-cards--2rows {
+.blog-cards.blog-cards--2column {
   @include mq("md") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -27,9 +27,9 @@
 
 .faq-list__question::before {
   background-color: $white;
+  display: inline-block;
   content: "";
   height: rem(1);
-  display: inline-block;
   position: absolute;
   right: rem(16);
   top: 50%;
@@ -43,33 +43,18 @@
 }
 .faq-list__question::after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: rem(28);
   height: rem(1);
   background-color: $white;
-  z-index: 10;
-  @include mq("md") {
-    width: rem(32);
-    right: rem(40);
-  }
-}
-
-.faq-list__question::before {
-  right: rem(16);
-  top: 50%;
-  transform: translateY(-50%);
-  @include mq("md") {
-    right: rem(40);
-  }
-}
-
-.faq-list__question::after {
   right: rem(16);
   top: 50%;
   transform: translateY(-50%) rotate(0);
   transition: transform 0.3s ease-in-out;
+  z-index: 10;
   @include mq("md") {
+    width: rem(32);
     right: rem(40);
   }
 }
@@ -82,7 +67,7 @@
   opacity: 1;
   right: rem(16);
   top: 50%;
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(0deg);
   transition: transform 0.3s ease-in-out;
   @include mq("md") {
     right: rem(40);
@@ -90,9 +75,10 @@
 }
 
 .faq-list__answer {
+  // display: none;
   border: rem(1) solid $green1;
   background-color: $white;
-  padding: rem(20) rem(16) rem(19);
+  padding: rem(22) rem(16) rem(17);
   @include mq("md") {
     padding: rem(37) rem(40);
     margin-top: rem(17);

@@ -9,7 +9,7 @@
   position: absolute;
   width: rem(120);
   height: rem(55);
-  top: rem(-27);
+  top: rem(-23);
   left: rem(15);
   z-index: -1;
   background-image: url(../images/common/sub-fish.png);
@@ -24,13 +24,18 @@
   }
 }
 
-.terms-of-service__contents {
-  max-width: rem(520);
+.terms-of-service__inner.inner {
+  max-width: rem(530);
   width: 100%;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   @include mq("md") {
-    max-width: rem(800);
+    max-width: rem(850);
   }
+}
+
+.terms-of-service__contents {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .terms-of-service__title {
@@ -44,13 +49,10 @@
 }
 
 .terms-of-service__summary-top {
-  margin-top: rem(37);
+  margin-top: rem(40);
   font-size: rem(16);
   line-height: 2;
   font-family: "Noto Sans JP", sans-serif;
-  @include mq("md") {
-    margin-top: rem(36);
-  }
 }
 
 .terms-of-service__summary-bottom {
@@ -63,15 +65,7 @@
 }
 
 .terms-of-service__items {
-  margin-top: rem(33);
-  @include mq("md") {
-    margin-top: rem(34);
-  }
-}
-
-.terms-of-service__item {
-  padding-left: rem(4);
-  padding-right: rem(4);
+  margin-top: rem(32);
 }
 
 .terms-of-service__item-box {
@@ -86,6 +80,6 @@
 }
 
 .terms-of-service__text--indent {
-  padding-left: 1em;
-  text-indent: -1em;
+  padding-left: 1.5em;
+  text-indent: -1.1em;
 }

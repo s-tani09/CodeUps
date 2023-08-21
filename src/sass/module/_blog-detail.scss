@@ -1,11 +1,13 @@
 @use "global" as *;
 
 .blog-detail {
+  @include mq("md") {
+    max-width: rem(700);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
-
-.blog-detail__inner {
-}
-
 .blog-detail__mata {
 }
 
@@ -32,7 +34,7 @@
 .blog-detail__image {
   margin-top: rem(22);
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(35);
   }
 }
 
@@ -49,7 +51,7 @@
 .blog-detail__text {
   margin-top: rem(27);
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(44);
   }
   nav {
     margin-top: rem(24);

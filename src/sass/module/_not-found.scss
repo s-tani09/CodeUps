@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .not-found {
-  background-color: $green1;
   position: relative;
   z-index: 1;
 }
@@ -35,12 +34,9 @@
 .not-found__content {
   color: $white;
   text-align: center;
-  padding-top: rem(52);
-  margin-inline: auto;
-  padding-bottom: rem(40);
+  margin-top: rem(52);
   @include mq("md") {
-    padding-top: rem(119);
-    padding-bottom: rem(151);
+    margin-top: rem(119);
   }
 }
 

@@ -4,6 +4,10 @@
   max-width: rem(500);
   width: 100%;
   margin: auto;
+  @include mq("md") {
+    max-width: rem(750);
+    margin: initial;
+  }
 }
 
 .categories__items {
@@ -30,13 +34,13 @@
   }
 }
 
+.categories__item.current {
+  color: $white;
+  background-color: $green1;
+}
+
 .categories__item:hover {
   color: $white;
   background-color: $green1;
   cursor: pointer;
-}
-
-.categories__item.current {
-  color: $white;
-  background-color: $green1;
 }

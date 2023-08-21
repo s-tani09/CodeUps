@@ -3,6 +3,6 @@
 .menu-lists__item + .menu-lists__item {
   margin-top: rem(48);
   @include mq("md") {
-    margin-top: rem(44.8);
+    margin-top: rem(44);
   }
 }

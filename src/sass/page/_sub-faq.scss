@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.sub-information {
-  margin-top: rem(121);
+.sub-faq {
+  margin-top: rem(52);
   @include mq("md") {
     margin-top: rem(150);
   }
