@@ -102,11 +102,7 @@
 
 .loading__image-right--fadeUp {
   animation-name: fadeUpAnimeRight;
-<<<<<<< HEAD
   animation-duration: 1.5s;
-=======
-  animation-duration: 2.5s;
->>>>>>> ed242dba778e36a41d183359748eca11546ece5a
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -120,22 +116,13 @@
   }
 }
 
-<<<<<<< HEAD
 .loading__delay {
   animation-delay: 0.2s;
-=======
-.delay {
-  animation-delay: 0.3s;
->>>>>>> ed242dba778e36a41d183359748eca11546ece5a
 }
 
 .is-close {
   animation-name: fadeOutAnime;
-<<<<<<< HEAD
   animation-duration: 2s;
-=======
-  animation-duration: 2.5s;
->>>>>>> ed242dba778e36a41d183359748eca11546ece5a
   animation-fill-mode: forwards;
 }
 @keyframes fadeOutAnime {
