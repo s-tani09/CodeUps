@@ -1,11 +1,15 @@
 @use "global" as *;
 
-.archive-campaign-cards__items {
+.archive-campaign-cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: rem(40);
+  padding-left: rem(33);
+  padding-right: rem(33);
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);
     gap: rem(80) rem(40);
+    padding-left: 0;
+    padding-right: 0;
   }
 }

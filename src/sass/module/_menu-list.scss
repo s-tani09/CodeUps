@@ -13,7 +13,7 @@
 }
 
 .menu-list__item {
-  margin-top: rem(11);
+  margin-top: rem(12.2);
   display: flex;
   flex-wrap: wrap;
   row-gap: rem(20);
@@ -22,7 +22,7 @@
   }
 }
 
-.menu-list__item dt {
+.menu-list__course {
   width: 80%;
   line-height: 1;
   font-size: rem(14);
@@ -31,7 +31,7 @@
   }
 }
 
-.menu-list__item dd {
+.menu-list__price {
   width: 20%;
   text-align: right;
   font-family: "Noto Sans JP", sans-serif;

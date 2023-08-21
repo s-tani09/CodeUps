@@ -2,8 +2,8 @@
 
 .price-lists {
   display: grid;
-  gap: rem(30);
+  gap: rem(41);
   @include mq("md") {
-    gap: rem(74);
+    gap: rem(77);
   }
 }

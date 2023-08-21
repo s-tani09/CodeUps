@@ -1,9 +1,28 @@
 @use "global" as *;
 
-.archive-voice {
+.archive-voice__inner {
+  position: relative;
 }
 
-.archive-voice__inner {
+.archive-voice__inner::before {
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-148);
+  left: rem(15);
+  z-index: -1;
+  background-image: url(../images/common/sub-fish.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include mq("md") {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-144);
+    left: rem(15);
+    left: calc(50% - min(49vw, rem(620.8)));
+  }
 }
 
 .archive-voice__cards {

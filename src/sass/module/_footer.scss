@@ -2,7 +2,7 @@
 
 .footer {
   background-color: $green1;
-  padding: rem(48) 0 rem(70);
+  padding: rem(47) 0 rem(70);
   @include mq("md") {
     padding: rem(80) 0;
   }
@@ -28,17 +28,17 @@
 }
 
 .footer__snsLinks {
-  margin-top: rem(18);
+  margin-top: rem(21);
   display: flex;
   @include mq("md") {
     margin-top: 0;
-    margin-left: rem(40);
+    margin-left: rem(44);
     padding-bottom: rem(9);
   }
 }
 
 .footer__snsLink + .footer__snsLink {
-  margin-left: rem(16);
+  margin-left: rem(20);
 }
 
 .footer__snsLink a:hover {
@@ -46,11 +46,11 @@
 }
 
 .footer__snsLink img {
-  width: rem(24);
-  height: rem(24);
+  width: rem(20);
+  height: rem(20);
   @include mq("md") {
-    width: rem(32);
-    height: rem(32);
+    width: rem(26);
+    height: rem(26);
   }
 }
 
@@ -65,12 +65,12 @@
   text-align: center;
   margin-top: rem(21);
   @include mq("md") {
-    margin-top: rem(55);
+    margin-top: rem(40);
   }
 }
 
 .footer__copyright small {
-  font-size: rem(12);
+  font-size: rem(10);
   color: $white;
   @include mq("md") {
     font-size: rem(14);

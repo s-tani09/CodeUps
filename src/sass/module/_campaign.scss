@@ -1,12 +1,15 @@
 @use "global" as *;
-
+.campaign {
+  // overflow: hidden;
+}
 .campaign__inner {
   position: relative;
 }
 
 .campaign__slider {
-  margin-top: rem(32);
-  margin-right: calc(50% - 50vw);
+  margin-top: rem(27);
+  // margin-right: calc(50% - 50vw);
+  margin-right: calc(50% - 49.4vw);
   padding-bottom: rem(10);
   @include mq("md") {
     margin-top: rem(40);
@@ -14,10 +17,10 @@
 }
 
 .campaign__button {
-  margin-top: rem(32);
+  margin-top: rem(29);
   text-align: center;
   @include mq("md") {
-    margin-top: rem(67);
+    margin-top: rem(70);
   }
 }
 
@@ -58,11 +61,11 @@
 }
 
 .campaign-button-prev::after {
-  background-image: url(../images/common/arrow-left.png);
+  background-image: url(../images/common/arrow-left.svg);
 }
 
 .campaign-button-next::after {
-  background-image: url(../images/common/arrow-right.png);
+  background-image: url(../images/common/arrow-right.svg);
 }
 
 .campaign-button-prev:hover,

@@ -28,6 +28,10 @@
   }
 }
 
+.tab-menu__list span {
+  display: inline-block;
+}
+
 .tab-menu__list.current {
   background-color: $green1;
   color: $white;

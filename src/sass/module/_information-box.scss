@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.information-box__items {
+.information-box__content {
   display: block;
   @include mq("md") {
     display: flex;

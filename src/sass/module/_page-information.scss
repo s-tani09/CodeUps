@@ -9,7 +9,7 @@
   position: absolute;
   width: rem(120);
   height: rem(55);
-  top: rem(-93);
+  top: rem(-94);
   left: rem(15);
   z-index: -1;
   background-image: url(../images/common/sub-fish.png);
@@ -25,7 +25,7 @@
 }
 
 .page-information__content-group {
-  margin-top: rem(16);
+  margin-top: rem(15);
   @include mq("md") {
     margin-top: rem(24);
   }

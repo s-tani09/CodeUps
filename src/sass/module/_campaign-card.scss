@@ -4,23 +4,10 @@
   box-shadow: rem(2) rem(2) rem(10) rgba($color: $black1, $alpha: 0.25);
   display: flex;
   flex-direction: column;
-  transition: opacity 0.5s;
-  cursor: pointer;
-}
-
-.campaign-card:hover {
-  opacity: 0.8;
 }
 
 .campaign-card__image img {
   aspect-ratio: 333 / 223;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.campaign-card__image.campaign-card__image--side img {
-  aspect-ratio: 294 / 188;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -34,10 +21,10 @@
   }
 }
 
-.campaign-card__body.campaign-card__body--center {
-  text-align: center;
-  padding: rem(10);
-  padding-bottom: 0;
+.campaign-card__body.campaign-card__body--sub {
+  @include mq("md") {
+    padding: rem(24) rem(24) 0;
+  }
 }
 
 .campaign-card__category {
@@ -62,6 +49,16 @@
   }
 }
 
+.campaign-card__title.campaign-card__title--sub {
+  font-size: rem(16);
+  font-weight: $medium;
+  margin-top: rem(8);
+  padding-bottom: 0;
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
 .campaign-card__textBlock {
   padding: rem(6) rem(16) rem(16);
   margin-top: auto;
@@ -81,19 +78,24 @@
   background-color: $green1;
 }
 
-.campaign-card__textBlock.campaign-card__textBlock--side {
-  padding-top: 0;
-  padding-bottom: rem(13);
-  margin-top: auto;
+.campaign-card__textBlock.campaign-card__textBlock--sub {
+  padding: rem(13) rem(16) rem(14);
+  @include mq("md") {
+    padding: rem(24) rem(24) 0;
+  }
 }
 
-.campaign-card__textBlock.campaign-card__textBlock--side::before {
+.campaign-card__textBlock.campaign-card__textBlock--sub::before {
+  content: "";
   position: absolute;
-  top: rem(-4);
-  left: rem(23);
-  width: 84%;
+  top: rem(4);
+  width: 89%;
   height: rem(1);
   background-color: $green1;
+  @include mq("md") {
+    top: rem(-3);
+    width: 92%;
+  }
 }
 
 .campaign-card__text {
@@ -105,13 +107,6 @@
     font-size: rem(16);
     padding-top: rem(1);
   }
-}
-
-.campaign-card__text.campaign-card__text--side {
-  font-size: rem(14);
-  font-weight: $regular;
-  text-align: center;
-  padding-top: rem(9);
 }
 
 .campaign-card__price {
@@ -126,10 +121,18 @@
     margin-top: rem(-3);
   }
 }
-.campaign-card__price.campaign-card__price--side {
+
+.campaign-card__price.campaign-card__price--sub {
+  margin-top: rem(1);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  font-family: $second-font-family;
+  font-weight: $bold;
+  gap: 0;
   @include mq("md") {
-    margin-top: rem(3);
-    gap: rem(19);
+    margin-top: rem(-3);
+    gap: 9%;
     justify-content: center;
   }
 }
@@ -144,6 +147,20 @@
   }
 }
 
+.campaign-card__price-regular.campaign-card__price-regular--sub::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: $red;
+  width: 100%;
+  height: rem(3);
+  top: 31%;
+  left: 0;
+  @include mq("md") {
+    top: 47%;
+  }
+}
+
 .campaign-card__price-regular::before {
   content: "";
   position: absolute;
@@ -153,12 +170,6 @@
   height: rem(3);
   top: 53%;
   left: 0;
-}
-
-.campaign-card__price-regular.campaign-card__price-regular--side {
-  @include mq("md") {
-    font-size: rem(20);
-  }
 }
 
 .campaign-card__price-sale {
@@ -176,26 +187,87 @@
   }
 }
 
+.campaign-card__explanation {
+  margin-top: rem(16);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+}
+
 .campaign-card__guidance {
   text-align: center;
   padding-top: rem(32);
-  padding-bottom: rem(40);
+  padding-bottom: rem(47);
   color: $green1;
+  @include mq("md") {
+    padding-bottom: rem(42);
+  }
 }
 
-.campaign-card__trem {
+.campaign-card__period {
   font-size: rem(16);
   font-weight: $bold;
   line-height: 1.125;
 }
 
 .campaign-card__reserve {
-  margin-top: rem(7);
+  margin-top: rem(6);
   font-size: rem(14);
   line-height: 1.286;
   font-weight: $regular;
 }
 
 .campaign-card__button {
-  margin-top: rem(16);
+  margin-top: rem(15);
+}
+
+// 下層ページ blog-side
+.campaign-card__image.campaign-card__image--side img {
+  aspect-ratio: 294 / 188;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.campaign-card__body.campaign-card__body--center {
+  text-align: center;
+  padding: rem(10);
+  padding-bottom: 0;
+}
+
+.campaign-card__textBlock.campaign-card__textBlock--side {
+  padding-top: 0;
+  padding-bottom: rem(13);
+  margin-top: auto;
+}
+
+.campaign-card__textBlock.campaign-card__textBlock--side::before {
+  position: absolute;
+  top: rem(-4);
+  left: rem(23);
+  width: 84%;
+  height: rem(1);
+  background-color: $green1;
+}
+
+.campaign-card__text.campaign-card__text--side {
+  font-size: rem(14);
+  font-weight: $regular;
+  text-align: center;
+  padding-top: rem(9);
+}
+
+.campaign-card__price.campaign-card__price--side {
+  justify-content: center;
+  gap: 7%;
+  @include mq("md") {
+    margin-top: rem(3);
+    gap: rem(19);
+  }
+}
+
+.campaign-card__price-regular.campaign-card__price-regular--side {
+  @include mq("md") {
+    font-size: rem(20);
+  }
 }

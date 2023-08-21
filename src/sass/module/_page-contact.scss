@@ -43,3 +43,14 @@
     left: calc(50% - min(49vw, rem(620.8)));
   }
 }
+
+.page-contact__inner.inner {
+  max-width: rem(520);
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(750);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

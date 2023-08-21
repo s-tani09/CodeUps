@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.form__inner {
-  max-width: rem(520);
-  width: 100%;
-  margin: auto;
-  @include mq("md") {
-    max-width: rem(700);
-  }
-}
-
 .form__items.error {
   margin-top: rem(40);
 }
@@ -17,14 +8,14 @@
   padding-bottom: rem(24);
   border-bottom: rem(2) dotted $green1;
   @include mq("md") {
-    padding-bottom: rem(38);
+    padding-bottom: rem(39);
   }
 }
 
 .form__item:not(:first-child) {
-  margin-top: rem(24);
+  padding-top: rem(24);
   @include mq("md") {
-    margin-top: rem(40);
+    padding-top: rem(39);
   }
 }
 
@@ -79,11 +70,11 @@
   border-width: rem(9) rem(6) 0 rem(6);
   border-color: $green1 transparent transparent transparent;
   right: rem(8);
-  top: 49%;
+  top: 57%;
   cursor: pointer;
   z-index: 1;
   @include mq("md") {
-    top: 20%;
+    top: 47%;
   }
 }
 
@@ -93,6 +84,12 @@
   border: rem(1) solid $green1;
   font-size: rem(12);
   font-family: "Noto Sans JP", sans-serif;
+}
+
+.form__input-text.form__input-text--select {
+  @include mq("md") {
+    padding: rem(5) rem(8);
+  }
 }
 
 .form__input-text.error {
@@ -227,6 +224,6 @@ input:checked + span::after {
   text-align: center;
   margin-top: rem(24);
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(30);
   }
 }

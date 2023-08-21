@@ -2,7 +2,7 @@
 
 .voice-card {
   box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 0.25);
-  padding: rem(15) rem(16) rem(22);
+  padding: rem(15) rem(16) rem(18);
 
   @include mq("md") {
     padding: rem(22) rem(24) rem(19);
@@ -19,16 +19,17 @@
   width: 47.6038%;
   @include mq("md") {
     width: 60.474%;
-    padding-top: rem(24);
+    padding-top: rem(18);
   }
 }
 
 .voice-card__meta {
-  margin-top: rem(5);
+  margin-top: rem(1);
   @include mq("md") {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    margin-top: rem(5);
   }
 }
 

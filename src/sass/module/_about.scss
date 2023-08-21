@@ -20,9 +20,9 @@
 }
 
 .about__image-box {
-  margin-top: rem(30);
+  margin-top: rem(25);
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(39);
   }
 }
 
@@ -62,7 +62,7 @@
 .about__content-box {
   margin-top: rem(40);
   @include mq("md") {
-    margin-top: 0;
+    margin-top: rem(-4);
     width: 74.78%;
     position: absolute;
     top: 40.5%;
@@ -103,6 +103,6 @@
 }
 
 .about__button {
-  margin-top: rem(40);
+  margin-top: rem(37);
   text-align: center;
 }

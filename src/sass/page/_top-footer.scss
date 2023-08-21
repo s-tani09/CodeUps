@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .top-footer {
-  margin-top: rem(108);
+  margin-top: rem(103);
   @include mq("md") {
     margin-top: rem(159);
   }
